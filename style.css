@@ -8,6 +8,44 @@
    Text domain: pt_BR
 */
 
+:root{
+   
+	--ff-Inter: font-family: 'Inter', sans-serif;
+
+	--fw-1: 400;
+	--fw-2: 500;
+	--fw-3: 700;
+
+/*
+   Memory font-size:
+   Ideal:
+   Mobile 375:
+   28px
+   24px
+   16px
+   13px
+   
+   Desktop 1440:
+   32px
+   xxx
+   16px
+   13px
+*/
+  --fs-1: clamp(0.81rem, calc(0.75rem + 0.28vw), 1.00rem); /*13 - 16*/
+  --fs-2: clamp(1.02rem, calc(0.95rem + 0.28vw), 1.20rem); /*16 - 19*/
+  --fs-3: clamp(1.59rem, calc(1.54rem + 0.21vw), 1.73rem); /*25 - 27*/
+  --fs-4: clamp(1.98rem, calc(1.95rem + 0.14vw), 2.07rem); /*31 - 33*/
+
+  /*Colors*/
+	--gray-1: #343A40;
+	--black-1: #212529;
+	--black-2: #000000;
+	--white-1: #FFFFFF;
+	--purple-1: #9353FF;
+	--yellow-1: #DAFF01;
+
+}
+
 body{
-   background-color: #666666;
+	background-color: var(--gray-1);
 }
