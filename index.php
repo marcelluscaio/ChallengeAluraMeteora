@@ -1,3 +1,8 @@
+<?php
+wp_enqueue_style('style.css')
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
