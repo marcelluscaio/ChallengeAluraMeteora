@@ -3,8 +3,9 @@
    Theme URI: https://github.com/marcelluscaio/ChallengeAluraMeteora
    Author: Caio Cabral
    Author URI: https://github.com/marcelluscaio
+   Description: Tema desenvolvido para o Challenge Front-End da Alura iniciado em 19/06
    Github Theme URI: https://github.com/marcelluscaio
-   Version: 1.0
+   Version: 1.0.0
    Text domain: pt_BR
 */
 
@@ -46,6 +47,16 @@
 
 }
 
+*{
+   box-sizing: border-box;
+}
+
+html,
 body{
-	background-color: var(--gray-1);
+   margin: 0;
+   padding: 0;
+}
+
+.header{
+   background-color: var(--black-2);
 }
