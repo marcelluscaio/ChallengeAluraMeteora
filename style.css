@@ -58,6 +58,12 @@ body{
    margin: 0;
 }
 
+ul{
+   margin: 0;
+}
+
+/*faze rum bom reset
+*/
 .header{
    background-color: var(--black-2);
 }

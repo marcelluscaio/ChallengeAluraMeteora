@@ -56,10 +56,18 @@ function wps_deregister_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
 
+remove_action('wp_head', '_admin_bar_bump_cb');
 
-wp_register_style('cm_general-style', get_template_directory_uri().'/style.css');
 
-wp_enqueue_style('cm_general-style');
+
+
+
+function cm_add_style(){
+   wp_register_style('cm_general-style', get_template_directory_uri().'/style.css');
+
+   wp_enqueue_style('cm_general-style');
+}
+add_action('wp_enqueue_scripts', 'cm_add_style')
 
 
 //Criar pasta Functions
