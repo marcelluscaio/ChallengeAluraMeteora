@@ -9,9 +9,89 @@
    Text domain: pt_BR
 */
 
+
+/*RESET*/
+/*Fontes*/
+/* https://meyerweb.com/eric/tools/css/reset/ */
+/*https://piccalil.li/blog/a-modern-css-reset*/
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Added by Kevin Powell*/
+*{
+	padding: 0;
+	margin: 0;
+	font: inherit;
+}
+
+/*Is this necessary?*/
+/* input, button, textarea, select {
+  font: inherit;
+} */
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed. 
+I (Caio) took out the role list because it shouldnt be used with already semantic tags 
+Is it possible to put another role in ul/ol?
+*/
+ul/* [role='list'] */,
+ol/* [role='list'] */ {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body{
+	height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  /* min-height: 100vh ;*/ /*KP takes this becaus adds above. Didn t work for me*/
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+/*I dont like this. Should use a text decoration none */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  display: block;
+}
+
+/*Caio adition. Should keep it?*/
+a{
+   color: inherit;
+   text-decoration: none;
+}
+
+/*Design system / general layout*/
+
 :root{
    
-	--ff-Inter: font-family: 'Inter', sans-serif;
+	--ff-inter: 'Inter', sans-serif;
 
 	--fw-1: 400;
 	--fw-2: 500;
@@ -44,26 +124,34 @@
 	--white-1: #FFFFFF;
 	--purple-1: #9353FF;
 	--yellow-1: #DAFF01;
-
 }
 
-*{
-   box-sizing: border-box;
-}
-
-html,
 body{
-   height: 100%;
-   padding: 0;
-   margin: 0;
+   font-family: var(--ff-inter);
 }
 
-ul{
-   margin: 0;
+
+/*Components and Utility classes*/
+.container{
+   width: 95%;
+   max-width: 75rem;
+   margin-inline: auto;
 }
 
-/*faze rum bom reset
-*/
+.title{
+   font-weight: var(--fw-2);
+   font-size: var(--fs-4);
+   line-height: 1.2;
+}
+
+.title--extra-small{
+   font-size: var(--fs-2);
+}
+
+
+
+/*Header*/
+
 .header{
    background-color: var(--black-2);
 }
