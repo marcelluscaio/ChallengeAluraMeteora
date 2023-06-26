@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +12,8 @@
 <body>
 
 <header class="header">
-   <?php/*
+   <?php
+   /*
       Adicionar o filtro a ul
       https://developer.wordpress.org/reference/functions/add_filter/
       https://developer.wordpress.org/reference/hooks/wp_nav_menu_items/
@@ -122,6 +121,35 @@
 </section>
 
 <!-- FACILIDADES -->
-<section>
+<section class="container">
    <h2>Conheça todas as nossas facilidades</h2>
+   <ul>
+      <li>
+         <h3>Pague pelo pix</h3>
+         <p>Ganhe 5% OFF em pagamentos via PIX</p>
+      </li>
+      <li>
+         <h3>Troca grátis</h3>
+         <p>Fique livre para trocar em até 30 dias</p>
+      </li>
+      <li>
+         <h3>Sustentabilidade</h3>
+         <p>Moda responsável, que respeita o meio ambiente</p>
+      </li>
+   </ul>
+</section>
+
+<!-- MAILING -->
+<section class="container">
+   <form>
+      <fieldset>
+         <legend>Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? Cadastre-se!</legend>
+         
+         <div>
+            <label>Digite seu email</label>
+            <input />
+            <button>Enviar</button>
+         </div>
+      </fieldset>
+   </form>
 </section>
