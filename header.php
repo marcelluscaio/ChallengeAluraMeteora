@@ -12,7 +12,7 @@
 <body>
 
 <header class="header">
-   <div class="container">
+   <div class="header__desktop-container container">
 <?php
 /*
    Como adicionar item ao menu wordpress: Adicionar o filtro a ul
@@ -32,29 +32,32 @@
 add_filter( 'wp_nav_menu_items', 'append_item', 10, 2); 
 */
 ?>
-
+      <div class="header__mobile-container container">
       <!-- Colocar dinamicamente no painel administrativo -->
-      <img class= "header__logo" src=<?= get_template_directory_uri()."/assets/images/logo.png" ?> alt="" />
+         <img class= "header__logo" src=<?= get_template_directory_uri()."/assets/images/logo.png" ?> alt="" />
    
 <?php
 /* 
 Adicionar menu dinamicamente. 
 Adicionar isso com um if ("Nenhum menu cadastrado, cadastre o menu" 
 */
-      if(has_nav_menu('primary')){
-         wp_nav_menu(
-            array(
-               'theme_location' => 'primary', /*Nome registrado em function.php register nav menu*/
-               'container' => 'nav'
-            )
-         );
-      } else {
-         echo '<p class="header__menu-message">Cadastre um menu</p>';
-      }
-      ?>
+         if(has_nav_menu('primary')){
+            wp_nav_menu(
+               array(
+                  'theme_location' => 'primary', /*Nome registrado em function.php register nav menu*/
+                  'container' => 'nav'
+               )
+            );
+         } else {
+            echo '<p class="header__menu-message">Cadastre um menu</p>';
+         }
+         ?>
+      </div>
       <form>
-         <input type="text" placeholder="Digite o produto" />
-         <button>Buscar</button>
+         <div class="container">
+            <input class="regular-text regular-text--small" type="text" placeholder="Digite o produto" />
+            <button class="regular-text button button--white">Buscar</button>
+         </div>
       </form>
    </div>
 </header>
