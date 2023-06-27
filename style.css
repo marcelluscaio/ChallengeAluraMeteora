@@ -153,5 +153,20 @@ body{
 /*Header*/
 
 .header{
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+
+	background-color: var(--black-2);
+
+}
+
+.header__menu-message{
+  color: var(--white-1);
+}
+
+
+
+/*Footer*/
+.footer{
    background-color: var(--black-2);
 }
