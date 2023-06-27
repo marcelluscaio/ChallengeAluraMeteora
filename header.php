@@ -12,50 +12,51 @@
 <body>
 
 <header class="header">
-   <?php
-   /*
-      Como adicionar item ao menu wordpress: Adicionar o filtro a ul
-      https://developer.wordpress.org/reference/functions/add_filter/
-      https://developer.wordpress.org/reference/hooks/wp_nav_menu_items/
-   */
-   /* function append_item($items, $args){
-      if($args->{'theme_location'} === 'primary'){
-         $items .= '<form>
-                  <input type="text" placeholder="Digite o produto" />
-                  <button>Buscar</button>
-               </form>';
-      }
-      return $items;
+   <div class="container">
+<?php
+/*
+   Como adicionar item ao menu wordpress: Adicionar o filtro a ul
+   https://developer.wordpress.org/reference/functions/add_filter/
+   https://developer.wordpress.org/reference/hooks/wp_nav_menu_items/
+*/
+/* function append_item($items, $args){
+   if($args->{'theme_location'} === 'primary'){
+      $items .= '<form>
+               <input type="text" placeholder="Digite o produto" />
+               <button>Buscar</button>
+            </form>';
    }
-   
-   add_filter( 'wp_nav_menu_items', 'append_item', 10, 2); 
-   */
-   ?>
+   return $items;
+}
 
-   <!-- Colocar dinamicamente no painel administrativo -->
-   <img class= "header__logo" src=<?= get_template_directory_uri()."/assets/images/logo.png" ?> alt="" />
+add_filter( 'wp_nav_menu_items', 'append_item', 10, 2); 
+*/
+?>
+
+      <!-- Colocar dinamicamente no painel administrativo -->
+      <img class= "header__logo" src=<?= get_template_directory_uri()."/assets/images/logo.png" ?> alt="" />
    
-   <?php
-   /* 
-   Adicionar menu dinamicamente. 
-   Adicionar isso com um if ("Nenhum menu cadastrado, cadastre o menu" 
-   */
-   if(has_nav_menu('primary')){
-      wp_nav_menu(
-         array(
-            'theme_location' => 'primary', /*Nome registrado em function.php register nav menu*/
-            'container' => 'nav'
-         )
-      );
-   } else {
-      echo '<p class="header__menu-message">Cadastre um menu</p>';
-   }
-   ?>
-   <form>
-      <input type="text" placeholder="Digite o produto" />
-      <button>Buscar</button>
-   </form>
-   
+<?php
+/* 
+Adicionar menu dinamicamente. 
+Adicionar isso com um if ("Nenhum menu cadastrado, cadastre o menu" 
+*/
+      if(has_nav_menu('primary')){
+         wp_nav_menu(
+            array(
+               'theme_location' => 'primary', /*Nome registrado em function.php register nav menu*/
+               'container' => 'nav'
+            )
+         );
+      } else {
+         echo '<p class="header__menu-message">Cadastre um menu</p>';
+      }
+      ?>
+      <form>
+         <input type="text" placeholder="Digite o produto" />
+         <button>Buscar</button>
+      </form>
+   </div>
 </header>
 
 

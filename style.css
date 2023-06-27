@@ -153,15 +153,32 @@ body{
 /*Header*/
 
 .header{
-	display: grid;
-	grid-template-columns: repeat(2, auto);
-
 	background-color: var(--black-2);
+}
+.header > .container{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+}
 
+.header > .container > :nth-child(1){
+	justify-self: start;
+}
+
+.header > .container > :nth-child(2){
+	justify-self: end;
+}
+
+.header > .container > :nth-child(1){
+	justify-self: start;
 }
 
 .header__menu-message{
   color: var(--white-1);
+}
+
+.header form{
+	grid-column: 1/3;
 }
 
 
