@@ -125,6 +125,8 @@ a{
 	--white-1: #FFFFFF;
 	--purple-1: #9353FF;
 	--yellow-1: #DAFF01;
+
+  --container-width: 85%;
 }
 
 body{
@@ -134,7 +136,7 @@ body{
 
 /*Components and Utility classes*/
 .container{
-  width: 85%;
+  width: var(--container-width);
   max-width: 75rem;
   margin-inline: auto;
 }
@@ -177,6 +179,12 @@ body{
   color: var(--black-2);
 }
 
+ /*720px*/
+ @media (min-width: 45em){
+  :root{
+    --container-width: 90%;
+  }
+ }
 
 
 /*Header*/
@@ -196,6 +204,13 @@ body{
 
   padding-block: 1.25em;
   
+  font-size: var(--fs-2);
+}
+
+.header__logo{
+  height: 1.125em;
+  aspect-ratio: 126 / 18;
+
   font-size: var(--fs-2);
 }
 
@@ -227,6 +242,39 @@ body{
 .header form input::placeholder{
   color: var(--gray-1);
 }
+
+ /*720px*/
+ @media (min-width: 45em){
+  .header__desktop-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: var(--container-width);
+  }
+
+  .header__mobile-container{
+    justify-content: flex-start;
+
+    width: unset;
+    padding-block: 0;
+    margin-inline: 0;
+    
+    font-size: var(--fs-2);
+  }
+  
+  .header form{
+    background-color: transparent;
+  }
+
+  .header form .container{
+    display: flex;
+
+    padding-block: 1.5em;
+    
+    font-size: var(--fs-2);
+  }
+ }
 
 
 
