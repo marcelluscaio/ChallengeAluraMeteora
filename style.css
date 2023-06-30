@@ -255,13 +255,11 @@ body{
 
   .header__mobile-container{
     justify-content: flex-start;
-    gap: 20px;
+    gap: 1.25em;
 
     width: unset;
     padding-block: 0;
-    margin-inline: 0;
-    
-    font-size: var(--fs-2);
+    margin-inline: 0; /*Cancela a centralizacao do container*/
   }
   
   .header form{
@@ -269,11 +267,17 @@ body{
   }
 
   .header form .container{
-    display: flex;
+    padding-block: .75em;
+    margin-inline: 0;
+    margin-left: auto; /*Cancela a centralizacao do container e empurra para a direita*/
 
-    padding-block: 1.5em;
+    /*Uncontainer this?*/
+  }
+
+  .header form .button--white{
+    background-color: var(--black-2);
     
-    font-size: var(--fs-2);
+    color: var(--white-1);
   }
  }
 
