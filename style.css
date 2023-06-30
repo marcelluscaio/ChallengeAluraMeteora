@@ -208,8 +208,8 @@ body{
 }
 
 .header__logo{
-  height: 1.125em;
-  aspect-ratio: 126 / 18;
+  height: 1.5em;
+  aspect-ratio: 133 / 32;
 
   font-size: var(--fs-2);
 }
@@ -255,6 +255,7 @@ body{
 
   .header__mobile-container{
     justify-content: flex-start;
+    gap: 20px;
 
     width: unset;
     padding-block: 0;

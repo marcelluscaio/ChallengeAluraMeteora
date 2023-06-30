@@ -32,6 +32,11 @@
 add_filter( 'wp_nav_menu_items', 'append_item', 10, 2); 
 */
 ?>
+
+<?php
+   $header_logo = get_template_directory_uri()."/assets/images/logo.png";
+?>
+
       <div class="header__mobile-container container">
       <!-- Colocar dinamicamente no painel administrativo -->
          <img class= "header__logo" src=<?= get_template_directory_uri()."/assets/images/logo.png" ?> alt="" />
