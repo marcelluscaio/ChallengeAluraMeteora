@@ -5,7 +5,7 @@
 
 get_header();
 
-get_template_part('busca_categoria');
+get_template_part('Template_parts/busca_categoria');
 
 get_footer();
 ?>
