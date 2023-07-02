@@ -1,0 +1,18 @@
+:root{
+  --container-width: 85%;
+}
+
+.container{
+  width: var(--container-width);
+  max-width: 75rem;
+  margin-inline: auto;
+}
+
+
+
+ /*720px*/
+ @media (min-width: 45em){
+  :root{
+    --container-width: 90%;
+  }
+ }

@@ -63,9 +63,26 @@ remove_action('wp_head', '_admin_bar_bump_cb');
 
 
 function cm_add_style(){
-   wp_register_style('cm_general-style', get_template_directory_uri().'/style.css');
+   wp_register_style('cm_reset', get_template_directory_uri().'/dist/css/general/style-guide/reset.css');
+   wp_register_style('cm_layout', get_template_directory_uri().'/dist/css/general/style-guide/layout.css');
+   wp_register_style('cm_fonts', get_template_directory_uri().'/dist/css/general/style-guide/fonts.css');
+   wp_register_style('cm_colors', get_template_directory_uri().'/dist/css/general/style-guide/colors.css');
 
-   wp_enqueue_style('cm_general-style');
+   wp_enqueue_style('cm_reset');
+   wp_enqueue_style('cm_layout');
+   wp_enqueue_style('cm_fonts');
+   wp_enqueue_style('cm_colors');
+
+   wp_register_style('cm_buttons', get_template_directory_uri().'/dist/css/general/components/buttons.css');
+   wp_enqueue_style('cm_buttons');
+
+   wp_register_style('cm_header', get_template_directory_uri().'/dist/css/general/header/header.css');
+   wp_enqueue_style('cm_header');
+
+   wp_register_style('cm_footer', get_template_directory_uri().'/dist/css/general/footer/footer.css');
+   wp_enqueue_style('cm_footer');
+
+
 }
 add_action('wp_enqueue_scripts', 'cm_add_style');
 
