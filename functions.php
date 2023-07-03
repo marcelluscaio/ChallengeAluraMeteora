@@ -90,7 +90,7 @@ add_action('wp_enqueue_scripts', 'cm_add_style');
 
 //habilitando menu configuravel
 add_theme_support('menus');
-register_nav_menu( 'primary', 'Menu home' ); /*Nome do menu no PHP, nome do menu no pain administrativo*/
+register_nav_menu( 'primary', 'Menu home' ); /*Nome do menu no PHP, nome do menu no painel administrativo*/
 
 
 
