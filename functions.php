@@ -59,18 +59,17 @@ add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
 remove_action('wp_head', '_admin_bar_bump_cb');
 
 
-
-
-
 function cm_add_style(){
    wp_register_style('cm_reset', get_template_directory_uri().'/dist/css/general/style-guide/reset.css');
-   wp_register_style('cm_layout', get_template_directory_uri().'/dist/css/general/style-guide/layout.css');
-   wp_register_style('cm_fonts', get_template_directory_uri().'/dist/css/general/style-guide/fonts.css');
-   wp_register_style('cm_colors', get_template_directory_uri().'/dist/css/general/style-guide/colors.css');
-
    wp_enqueue_style('cm_reset');
+
+   wp_register_style('cm_layout', get_template_directory_uri().'/dist/css/general/style-guide/layout.css');
    wp_enqueue_style('cm_layout');
+
+   wp_register_style('cm_fonts', get_template_directory_uri().'/dist/css/general/style-guide/fonts.css');
    wp_enqueue_style('cm_fonts');
+
+   wp_register_style('cm_colors', get_template_directory_uri().'/dist/css/general/style-guide/colors.css');
    wp_enqueue_style('cm_colors');
 
    wp_register_style('cm_buttons', get_template_directory_uri().'/dist/css/general/components/buttons.css');
@@ -81,16 +80,27 @@ function cm_add_style(){
 
    wp_register_style('cm_footer', get_template_directory_uri().'/dist/css/general/footer/footer.css');
    wp_enqueue_style('cm_footer');
-
-
 }
 add_action('wp_enqueue_scripts', 'cm_add_style');
+
+function cm_add_script(){
+    wp_register_script('cm_hamburger_menu', get_template_directory_uri().'/dist/js/general/hamburger-menu.js');
+    wp_enqueue_script('cm_hamburger_menu', '', array(), '', true);
+}
+add_action('wp_enqueue_scripts', 'cm_add_script');
+
+
+
 
 
 
 //habilitando menu configuravel
 add_theme_support('menus');
 register_nav_menu( 'primary', 'Menu home' ); /*Nome do menu no PHP, nome do menu no painel administrativo*/
+
+
+
+
 
 
 

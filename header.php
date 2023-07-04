@@ -31,7 +31,13 @@
 <?php
 	if(has_nav_menu('primary')) :
 ?>
-			<nav>
+			<button class="header__hamburger-button" id="hamburger-button">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</button>
+			<nav aria-hidden="true" id="menu">
+
 				<?= $header_menu ?>
 			</nav>
 
