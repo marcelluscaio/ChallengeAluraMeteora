@@ -37,7 +37,7 @@
 				<div class="line"></div>
 			</button>
 			<nav aria-hidden="true" id="menu">
-				<button aria-expanded="false" aria-controls="menu" class="header__hamburger-button" id="hamburger-button">
+				<button aria-expanded="false" aria-controls="menu" class="header__hamburger-button header__hamburger-button--close" id="hamburger-button">
 					<div class="line"></div>
 					<div class="line"></div>
 					<div class="line"></div>

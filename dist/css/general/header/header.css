@@ -43,7 +43,11 @@
 
   background-color: var(--yellow-1);
 
-  transition: transform 1s ease-in-out;
+  transition: transform .3s ease-in-out  .7s;
+}
+
+.header__hamburger-button[aria-expanded="true"] > .line{
+  transition: transform .3s ease-in-out;
 }
 
 .header__hamburger-button[aria-expanded="true"] > .line:first-child{
@@ -52,6 +56,31 @@
 
 .header__hamburger-button[aria-expanded="true"] > .line:last-child{
   transform: translateY(-300%);
+}
+
+.header__hamburger-button--close{
+  margin-left: auto;
+
+  transform: scale(0);
+  transition: transform .3s ease-out;
+}
+
+.header button.header__hamburger-button--close > div.line:first-child{
+  transform: translateY(300%) rotate(45deg);
+}
+
+.header button.header__hamburger-button--close > div.line:nth-child(2){
+  opacity: 0;
+}
+
+.header button.header__hamburger-button--close > div.line:last-child{
+  transform: translateY(-350%) rotate(-45deg);
+}
+
+.header button.header__hamburger-button--close[aria-expanded="true"]{
+  transform: scale(1);
+
+  transition: transform .3s ease-in .7s;
 }
 
 .header nav{
