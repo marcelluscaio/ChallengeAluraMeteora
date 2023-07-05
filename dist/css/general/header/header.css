@@ -152,6 +152,20 @@
     margin-inline: 0; /*Cancela a centralizacao do container*/
   }
 
+  .header__hamburger-button{
+    display: none;
+  }
+
+  .header nav{
+    position: static;
+
+    padding: 0;
+    
+    background-color: transparent;
+    
+    transform: none;
+  }
+
   .header ul{
     display: flex;
   }
