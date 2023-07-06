@@ -104,6 +104,18 @@
   color: var(--white-1);
 }
 
+.header ul li:not(:last-child)::after{
+  content: '';
+  
+  display: block;
+
+  height: .1em;
+  margin-block: .5em;
+
+  background-color: var(--white-1);
+}
+
+/*Error message*/
 .header__menu-message{
   color: var(--white-1);
 }
