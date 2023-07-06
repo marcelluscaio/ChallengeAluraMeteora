@@ -115,6 +115,25 @@
   background-color: var(--white-1);
 }
 
+.header ul li{
+  transition: opacity .5s cubic-bezier(0.68, 1.28, 1, 0.89)
+}
+
+.header ul li.current-menu-item{
+  color: var(--yellow-1);
+  font-weight: var(--fw-3);
+}
+
+.header ul li:hover{
+  opacity: .5;
+}
+
+.header ul li:active{
+  color: var(--yellow-1);
+  
+  opacity: 1;
+}
+
 /*Error message*/
 .header__menu-message{
   color: var(--white-1);
@@ -187,6 +206,9 @@
     gap: inherit;
   }
 
+  .header ul li:not(:last-child)::after{
+    content: none;
+  }
 
   .header ul,
   .header__menu-message,
