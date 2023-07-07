@@ -7,8 +7,9 @@
 $index = 0;
 foreach($slides as $slide):
 	$index++;
+	$className = '.carousel__slide--'.$index;
 ?>
-.carousel__slide--<?= $index ?>{
+<?= $className ?>{
 	background-image: url('<?=  $slide["carousel_image"] ?>');
 }
 <?php
