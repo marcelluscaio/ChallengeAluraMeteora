@@ -15,7 +15,7 @@ remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
  
 //Remove REST API in HTTP Headers
-remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
+remove_action( 'template_redirect', 'rest_output_link_header', 11);
 
 //Remove WLW Manifest
 remove_action( 'wp_head', 'wlwmanifest_link' );
@@ -34,7 +34,7 @@ remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 
 //Remove shortlink tag
-remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+remove_action('wp_head', 'wp_shortlink_wp_head', 10);
 
 
 /*https://smartwp.com/remove-gutenberg-css/*/
@@ -80,12 +80,18 @@ function cm_add_style(){
 
    wp_register_style('cm_footer', get_template_directory_uri().'/dist/css/general/footer/footer.css');
    wp_enqueue_style('cm_footer');
+
+   wp_register_style('cm_carousel', get_template_directory_uri().'/dist/css/home/carousel.css');
+   wp_enqueue_style('cm_carousel');
 }
 add_action('wp_enqueue_scripts', 'cm_add_style');
 
 function cm_add_script(){
     wp_register_script('cm_hamburger_menu', get_template_directory_uri().'/dist/js/general/hamburger-menu.js');
     wp_enqueue_script('cm_hamburger_menu', '', array(), '', true);
+
+    wp_register_script('cm_carousel', get_template_directory_uri().'/dist/js/home/carousel.js');
+    wp_enqueue_script('cm_carousel', '', array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'cm_add_script');
 
