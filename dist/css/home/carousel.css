@@ -3,3 +3,17 @@
   
   overflow-x: scroll;
 }
+
+.carousel__slide{
+  flex-shrink: 0;
+  
+  width: 100%;
+  aspect-ratio: 375 / 415;
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.carousel__slide > p{
+  color: var(--white-1);
+}
