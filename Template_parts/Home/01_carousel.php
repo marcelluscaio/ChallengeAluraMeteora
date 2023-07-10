@@ -38,12 +38,12 @@ $index = 0;
 foreach($slides as $slide):	
 	$index++;
 ?>
-			<button class="navigation--<?= $index ?> "></button>
+			<button class="navigation--<?= $index ?> <?php if($index === 1){echo "navigation--active";} ?>"></button>
 <?php endforeach ?>
 		</div>
 		<div class="carousel__controls__arrows">
-			<button class="carousel__controls__arrows__arrow"></button>
-			<button class="carousel__controls__arrows__arrow"></button>
+			<button class="arrow--left"></button>
+			<button class="arrow--right"></button>
 		</div>
 	</div>
 
