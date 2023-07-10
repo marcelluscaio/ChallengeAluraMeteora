@@ -16,7 +16,7 @@
   background-size: 100% 100%;
 }
 
-.carousel__slide.carousel__slide--2::before{
+.carousel__slide--bg::after{
   content: '';
 
   display: block;
@@ -26,8 +26,6 @@
   
   width: 100%;
   height: 50%;
-  
-  background-color: #b15263;
 }
 
 .carousel__slide > p{

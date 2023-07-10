@@ -115,6 +115,24 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_64ac4231b8bb8",
+                            "label": "Background-color",
+                            "name": "carousel_bg",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string"
                         }
                     ]
                 },
@@ -198,6 +216,24 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_64ac429ab8bb9",
+                            "label": "Background-color",
+                            "name": "carousel_bg",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string"
                         }
                     ]
                 },
@@ -281,6 +317,24 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_64ac42c4b8bba",
+                            "label": "Background-color",
+                            "name": "carousel_bg",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string"
                         }
                     ]
                 }
@@ -305,5 +359,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688675325
+    "modified": 1689011791
 }
