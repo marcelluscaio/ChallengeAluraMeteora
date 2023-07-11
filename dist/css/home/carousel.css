@@ -83,6 +83,11 @@
 
 .carousel__track{
   display: flex;
+
+  --position: 0;
+  transform: translateX(var(--position));
+
+  transition: transform 1s ease-in-out;
 }
 
 .carousel__track__slide{
