@@ -13,20 +13,23 @@
 }
 
 .carousel__controls__navigation{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  
   position: absolute;
   top: 65%;
   bottom: 0;
   z-index: 1;
   
   width: 100%;
+  padding-right: var(--fs-2);
+  
+  mix-blend-mode: exclusion;
 }
 
 .carousel__controls__navigation button{
-  display: block;
-
-  position: relative;
-  left: 90%;
-  
   --size: var(--fs-1);
   width: var(--size);
   height: calc(var(--size) / 5);
@@ -36,7 +39,6 @@
 
   background-color: var(--baseColor);
 
-  mix-blend-mode: exclusion;
   transform-origin: right;
   transition: transform .5s ease-in-out;
 }
@@ -50,11 +52,13 @@
   justify-content: space-between;
 
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   z-index: 1;
 
   width: 100%;
+
+  mix-blend-mode: exclusion;
 }
 
 .carousel__controls__arrows > button{
