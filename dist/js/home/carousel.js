@@ -6,18 +6,38 @@ const slideQuantity = track.childElementCount;
 const arrowRight = document.querySelector('.arrow--right');
 const arrowLeft = document.querySelector('.arrow--left');
 
-arrowRight.addEventListener('click', () => {
-    if(trackPosition > 1 - slideQuantity ){
+const navigation = document.querySelector(".carousel__controls__navigation");
+const navigationButtons = navigation.querySelectorAll("button");
+let activeNavigation = navigation.querySelector(".navigation--active");
+
+[arrowRight, arrowLeft].forEach(
+  button => button.addEventListener(
+    'click', (e) => carouselEngine(e.target)
+  )
+);
+
+function carouselEngine(button){
+  if(button.classList.contains('arrow--left')){
+    if(trackPosition > 0){
       trackPosition--;
     }
-    track.style.setProperty('--position', `${trackPosition*100}%`);
-  }
-)
-
-arrowLeft.addEventListener('click', () => {
-    if(trackPosition < 0){
+  } else if (button.classList.contains('arrow--right')){
+    if(trackPosition < slideQuantity - 1){
       trackPosition++;
     }
-    track.style.setProperty('--position', `${trackPosition*100}%`);
   }
-)
+  moveTrack(trackPosition);
+  changeActiveNavigation(trackPosition)
+}
+
+function moveTrack(trackPosition){
+  track.style.setProperty('--position', `${trackPosition*-100}%`);
+};
+
+function changeActiveNavigation(trackPosition){
+  if(activeNavigation !== navigationButtons[trackPosition]){
+    activeNavigation.classList.remove("navigation--active");
+    activeNavigation = navigationButtons[trackPosition];
+    navigationButtons[trackPosition].classList.add("navigation--active");
+  }
+}

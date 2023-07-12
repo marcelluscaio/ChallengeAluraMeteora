@@ -30,7 +30,7 @@
   --size: var(--fs-1);
   width: var(--size);
   height: calc(var(--size) / 5);
-  margin-bottom: var(--size);
+  margin-bottom: calc(var(--size) * 1.5);
   border: none;
   border-radius: var(--size);
 
