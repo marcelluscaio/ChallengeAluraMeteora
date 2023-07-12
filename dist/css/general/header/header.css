@@ -88,12 +88,14 @@
   top: 0;
   right: 0;
   transform: translateY(-100%);
+  z-index: 1;
 
   padding: var(--fs-2) calc(var(--fs-2) * 1.5);
 
   background-color: var(--gray-2);
 
   transition: transform 1s ease-in-out;
+  box-shadow: 0px 2px 4px 2px var(--black-1);
 }
 
 .header nav.show{
@@ -195,6 +197,7 @@
     background-color: transparent;
     
     transform: none;
+    box-shadow: none;
   }
 
   .header ul{
