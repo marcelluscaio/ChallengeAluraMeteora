@@ -128,3 +128,24 @@
 
   mix-blend-mode: exclusion;
 }
+
+/*720px*/
+@media (min-width: 45em){
+  .carousel__track__slide{
+    aspect-ratio: 768 / 415;
+
+    background-size: cover;
+
+  }
+
+  .carousel__track__slide.carousel__track__slide--bg{
+  
+    background-size: 50% auto;
+    background-position: top right;
+  }
+
+  .carousel__track__slide--bg::after{
+    width: 50%;
+    height: 100%;
+  }
+}

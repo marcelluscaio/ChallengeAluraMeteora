@@ -87,7 +87,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateY(-100%);
+  transform: translateY(-120%);
   z-index: 1;
 
   padding: var(--fs-2) calc(var(--fs-2) * 1.5);
