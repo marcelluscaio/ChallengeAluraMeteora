@@ -148,4 +148,14 @@
     width: 50%;
     height: 100%;
   }
+
+  .carousel__track__slide > p{
+    top: 27%;
+    left: 25%;
+    transform: translateX(-50%);
+
+    width: fit-content;
+    max-width: 50%;
+
+  }
 }
