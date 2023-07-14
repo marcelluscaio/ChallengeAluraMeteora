@@ -23,6 +23,23 @@ foreach($slides as $slide):
 }
 
 <?php
+		elseif(!$hasBg) :
+?>
+/*720px*/
+@media (min-width: 45em){
+<?= $slideClassName ?>{
+	background-image: url('<?=  $slide["imagem_tablet"] ?>');
+}
+}
+
+/*1040px*/
+@media (min-width: 65em){
+<?= $slideClassName ?>{
+	background-image: url('<?=  $slide["imagem_desktop"] ?>');
+}
+}
+
+<?php
 	endif;
 endforeach;
 ?>

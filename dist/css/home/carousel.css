@@ -159,3 +159,10 @@
 
   }
 }
+
+/*1040px*/
+@media (min-width: 65em){
+  .carousel__track__slide{
+    aspect-ratio: 1440 / 415;
+  }
+}
