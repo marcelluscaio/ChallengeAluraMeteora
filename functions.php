@@ -118,7 +118,7 @@ function cm_create_cpt_products(){
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'produtos'),
 			'menu_icon' => 'dashicons-cart',
-			'taxonomies' => array('cm_colors', 'cm_sizes')
+			'taxonomies' => array('cm_colors', 'cm_sizes', 'cm_types')
 		)
 	);
 }
@@ -140,6 +140,23 @@ function cm_create_tax_products_color(){
 }
 
 add_action( 'init', 'cm_create_tax_products_color');
+
+
+function cm_create_tax_products_type(){
+	$labels = array(
+		'labels' => array(
+			'name' => _x( 'Tipos', 'taxonomy general name' ),
+			'singular_name' => _x( 'Tipo', 'taxonomy singular name' ),
+			'add_new_item' => __('Adicionar tipo')
+		),
+		'hierarchical' => true,
+		'show_admin_column' => true,
+	); 
+
+	register_taxonomy('cm_types', 'cm_produtos', $labels); 
+}
+
+add_action( 'init', 'cm_create_tax_products_type');
 
 
 
