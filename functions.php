@@ -111,18 +111,54 @@ function cm_create_cpt_products(){
 		array(
 			'labels' => array(
 				'name' => __('Produtos'),
-				'singular_name' => __('Produto')
+				'singular_name' => __('Produto'),
+				'add_new' => 'Adicionar produto'
 			),
 			'public' => true,
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'produtos'),
-			'show_in_rest' => true,
-			'menu_icon' => 'dashicons-cart'
+			'menu_icon' => 'dashicons-cart',
+			'taxonomies' => array('cm_colors', 'cm_sizes')
 		)
 	);
 }
 
 add_action( 'init', 'cm_create_cpt_products' );
+
+function cm_create_tax_products_color(){
+	$labels = array(
+		'labels' => array(
+			'name' => _x( 'Cores', 'taxonomy general name' ),
+			'singular_name' => _x( 'Cor', 'taxonomy singular name' ),
+			'add_new_item' => __('Adicionar cor')
+		),
+		'hierarchical' => true,
+		'show_admin_column' => true,
+	); 
+
+	register_taxonomy('cm_colors', 'cm_produtos', $labels); 
+}
+
+add_action( 'init', 'cm_create_tax_products_color');
+
+
+
+function cm_create_tax_products_size(){
+	$labels = array(
+		'labels' => array(
+			'name' => _x( 'Tamanhos', 'taxonomy general name' ),
+			'singular_name' => _x( 'Tamanho', 'taxonomy singular name' ),
+			'add_new_item' => __('Adicionar tamanho')
+		),
+		'hierarchical' => true,
+		'show_admin_column' => true
+	); 
+
+	register_taxonomy('cm_sizes', 'cm_produtos', $labels); 
+}
+
+add_action( 'init', 'cm_create_tax_products_size');
+//O que fazer: Criar taxonomia Cores e tamanhos. Criar grupo de campo que diz Qual o tamanho, qual a cor e qual a quantidade
 
 
 
