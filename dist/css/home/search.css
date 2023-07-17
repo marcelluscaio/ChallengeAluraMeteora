@@ -1,0 +1,48 @@
+.search{
+  padding-block: var(--padding-block)
+}
+
+.search > h2{
+  margin-bottom: min(.875em, var(--padding-block));
+
+  text-align: center;
+}
+
+.search__items{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4vw 8vw;
+}
+
+.search__items img{
+  aspect-ratio: 146 / 192;
+}
+
+.search__items h3{
+  padding: .5em 1em;
+
+  background-color: var(--black-2);
+  
+  color: var(--white-1);
+  text-align: center;
+}
+
+/*720px*/
+@media (min-width: 45em){
+  .search > h2{
+    margin-bottom: min(1em, var(--padding-block));
+  }
+  
+  .search__items{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw 4vw;
+  }
+}
+
+/*1040px*/
+@media (min-width: 65em){
+  .search__items{
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5vw 2vw;
+  }
+}

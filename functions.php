@@ -83,6 +83,9 @@ function cm_add_style(){
 
 	wp_register_style('cm_carousel', get_template_directory_uri().'/dist/css/home/carousel.css');
 	wp_enqueue_style('cm_carousel');
+
+	wp_register_style('cm_search', get_template_directory_uri().'/dist/css/home/search.css');
+	wp_enqueue_style('cm_search');
 }
 add_action('wp_enqueue_scripts', 'cm_add_style');
 
