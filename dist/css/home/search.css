@@ -1,9 +1,9 @@
 .search{
-  padding-block: var(--padding-block)
+  padding-block: var(--padding-top) var(--padding-bottom)
 }
 
 .search > h2{
-  margin-bottom: min(.875em, var(--padding-block));
+  margin-bottom: min(.875em, var(--padding-top));
 
   text-align: center;
 }
@@ -15,6 +15,7 @@
 }
 
 .search__items img{
+  width: 100%;
   aspect-ratio: 146 / 192;
 }
 

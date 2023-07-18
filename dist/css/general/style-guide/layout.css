@@ -1,7 +1,8 @@
 :root{
   --container-width: 85%;
 
-  --padding-block: 5vh;
+  --padding-top: 5vh;
+  --padding-bottom: 3vh;
 }
 
 .container{
@@ -17,7 +18,7 @@
   :root{
     --container-width: 90%;
 
-    --padding-block: 7vh;
+    --padding-top: 7vh;
   }
  }
 
@@ -25,6 +26,6 @@
 /*1040px*/
 @media (min-width: 65em){
   :root{
-    --padding-block: 9vh;
+    --padding-top: 9vh;
   }
 }

@@ -28,7 +28,7 @@ foreach($posts as $post){
 //var_dump($posts)
 ?>
 
-<section class="container">
+<section class="highlights container">
 	<h2 class="title">Produtos que estão bombando</h2>
 	<ul>
 
@@ -38,10 +38,12 @@ foreach($posts_information as $post) :
 		<li>
 			<article>
 				<img src="<?= $post['imagem'] ?>" alt="<?= $post['nome'] ?>" />
-				<h3><?= $post['nome'] ?></h3>
-				<p><?= $post['descricao'] ?></p>
-				<p>R$ <?= $post['preco'] ?></p>
-				<a href="">Ver mais</a>
+				<div>
+					<h3 class="title title--extra-small"><?= $post['nome'] ?></h3>
+					<p class="description regular-text regular-text--small "><?= $post['descricao'] ?></p>
+					<p class="price title title--extra-small ">R$ <?= $post['preco'] ?></p>
+					<a class="button" href="">Ver mais</a>
+				</div>
 			</article>
 		</li>
 <?php

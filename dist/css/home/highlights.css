@@ -1,0 +1,42 @@
+.highlights{
+  padding-block: var(--padding-top) var(--padding-bottom)
+}
+
+.highlights h2{
+  margin-bottom: min(.875em, var(--padding-top));
+
+  text-align: center;
+}
+
+.highlights ul li{
+  margin-bottom: min(calc(var(--fs-4) * .875), var(--padding-top));
+  /*Equal to highlights h2*/
+}
+
+.highlights article img{
+  width: 100%;
+  aspect-ratio: 323/402;
+}
+
+.highlights article > div{
+  padding: var(--fs-2);
+  border-bottom: 1px solid var(--gray-1);
+  border-right: 1px solid var(--gray-1);
+  border-left: 1px solid var(--gray-1);
+}
+
+.highlights article h3{
+  margin-bottom: .875em;
+}
+
+.highlights article .description{
+  margin-bottom: 1em;
+}
+
+.highlights article .price{
+  margin-bottom: .625em;
+}
+
+.highlights article .button{
+  display: inline-block;
+}

@@ -36,6 +36,7 @@
 
 .title--extra-small{
   font-size: var(--fs-2);
+	font-weight: var(--fw-3);
 }
 
 .regular-text{

@@ -86,6 +86,9 @@ function cm_add_style(){
 
 	wp_register_style('cm_search', get_template_directory_uri().'/dist/css/home/search.css');
 	wp_enqueue_style('cm_search');
+
+	wp_register_style('cm_highlights', get_template_directory_uri().'/dist/css/home/highlights.css');
+	wp_enqueue_style('cm_highlights');
 }
 add_action('wp_enqueue_scripts', 'cm_add_style');
 
