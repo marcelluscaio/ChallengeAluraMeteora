@@ -1,3 +1,10 @@
 .footer{
+   padding-block: var(--fs-2);
+   
    background-color: var(--black-2);
+}
+
+.footer p{
+   color: var(--white-1);
+   text-align: center;
 }
