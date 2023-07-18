@@ -1,0 +1,49 @@
+.mailing{
+  padding-block: var(--padding-top);
+}
+
+.mailing form{
+  padding: calc(var(--fs-2) * 1.5);
+  border: 1px solid var(--gray-1);
+}
+
+.mailing fieldset{
+  border: none;
+}
+
+.mailing legend{
+  margin-bottom: 1.5em;
+}
+
+.mailing fieldset > div{
+  display: flex;
+
+  position: relative;
+}
+
+.mailing fieldset > div label{
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  transform: translateY(-50%);
+
+  pointer-events: none;
+  transition: top .5s ease-in-out,
+              left .5s ease-in-out,
+              transform .5s ease-in-out,
+              font-size .5s ease-in-out;
+}
+
+.mailing fieldset > div input{
+  width: 100%;
+  padding-left: 1em;
+}
+
+.mailing fieldset > div:has(input:focus) label{
+  left: 0;
+  top: 0;
+  transform: translateY(-100%);
+
+  font-size: var(--fs-1);
+}
+

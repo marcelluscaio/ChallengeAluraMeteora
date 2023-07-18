@@ -92,6 +92,9 @@ function cm_add_style(){
 
 	wp_register_style('cm_features', get_template_directory_uri().'/dist/css/home/features.css');
 	wp_enqueue_style('cm_features');
+
+	wp_register_style('cm_mailing', get_template_directory_uri().'/dist/css/home/mailing.css');
+	wp_enqueue_style('cm_mailing');
 }
 add_action('wp_enqueue_scripts', 'cm_add_style');
 

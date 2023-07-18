@@ -1,15 +1,14 @@
 <?php ?>
 
-<!-- MAILING -->
-<section class="container">
+<section class="mailing container">
    <form>
       <fieldset>
-         <legend>Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? Cadastre-se!</legend>
+         <legend class="regular-text">Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? Cadastre-se!</legend>
          
          <div>
-            <label>Digite seu email</label>
+            <label class="regular-text">Digite seu email</label>
             <input />
-            <button>Enviar</button>
+            <button class="regular-text button">Enviar</button>
          </div>
       </fieldset>
    </form>

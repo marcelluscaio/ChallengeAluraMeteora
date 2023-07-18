@@ -41,7 +41,7 @@ foreach($posts_information as $post) :
 					<h3 class="title title--extra-small"><?= $post['nome'] ?></h3>
 					<p class="description regular-text regular-text--small "><?= $post['descricao'] ?></p>
 					<p class="price title title--extra-small ">R$ <?= $post['preco'] ?></p>
-					<a class="button" href="">Ver mais</a>
+					<a class="button regular-text" href="">Ver mais</a>
 				</div>
 			</article>
 		</li>
