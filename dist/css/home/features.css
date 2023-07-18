@@ -53,3 +53,11 @@
 
   color: var(--white-1);
 }
+
+/*720px*/
+@media (min-width: 45em){
+  .features li{
+    width: 50%;
+    margin-inline: auto;
+  }
+}
