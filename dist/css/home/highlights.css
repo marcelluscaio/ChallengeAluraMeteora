@@ -1,5 +1,5 @@
 .highlights{
-  padding-block: var(--padding-top) var(--padding-bottom)
+  padding-block: var(--padding-top) calc(var(--padding-bottom) * 2)
 }
 
 .highlights h2{
@@ -8,7 +8,7 @@
   text-align: center;
 }
 
-.highlights ul li{
+.highlights ul li:where(:not(:last-child)){
   margin-bottom: min(calc(var(--fs-4) * .875), var(--padding-top));
   /*Equal to highlights h2*/
 }
@@ -39,4 +39,28 @@
 
 .highlights article .button{
   display: inline-block;
+}
+
+/*720px*/
+@media (min-width: 45em){
+  .highlights{
+    padding-block: var(--padding-top) calc(var(--padding-bottom) * 9)
+  }
+
+  .highlights h2{
+    margin-bottom: min(1em, var(--padding-top));
+  }
+  .highlights ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4vw;
+  }
+
+  .highlights ul li{
+    margin-bottom: 0;
+  }
+
+  .highlights article img{
+    aspect-ratio: 330/389;
+  }
 }

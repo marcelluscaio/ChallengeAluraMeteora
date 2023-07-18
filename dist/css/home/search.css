@@ -31,7 +31,7 @@
 /*720px*/
 @media (min-width: 45em){
   .search > h2{
-    margin-bottom: min(1em, var(--padding-block));
+    margin-bottom: min(1em, var(--padding-top));
   }
   
   .search__items{
