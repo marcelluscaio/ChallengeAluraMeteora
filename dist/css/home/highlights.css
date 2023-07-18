@@ -9,7 +9,7 @@
 }
 
 .highlights ul li:where(:not(:last-child)){
-  margin-bottom: min(calc(var(--fs-4) * .875), var(--padding-top));
+  margin-bottom: min(calc(var(--fs-3) * .875), var(--padding-top));
   /*Equal to highlights h2*/
 }
 

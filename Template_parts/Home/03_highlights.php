@@ -25,7 +25,6 @@ foreach($posts as $post){
 	);
 }
 
-//var_dump($posts)
 ?>
 
 <section class="highlights container">
@@ -49,15 +48,5 @@ foreach($posts_information as $post) :
 <?php
 endforeach
 ?>
-
-      <!-- <li>
-         <article>
-            <img src="" alt="" />
-            <h3>Camiseta Conforto</h3>
-            <p>Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.</p>
-            <p>70,00</p>
-            <a href="">Ver mais</a>
-         </article>
-      </li> -->
    </ul>
 </section>
