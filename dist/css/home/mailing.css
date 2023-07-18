@@ -47,3 +47,22 @@
   font-size: var(--fs-1);
 }
 
+/*720px*/
+@media (min-width: 45em){
+  .mailing form{
+    padding: calc(var(--fs-2) * 2.5);
+  }
+  
+  .mailing fieldset > div{
+    width: 75%;
+    margin-inline: auto;
+  }
+}
+
+/*1040px*/
+@media (min-width: 65em){
+  .mailing form{
+    width: 75%;
+    margin-inline: auto;
+  }
+}
