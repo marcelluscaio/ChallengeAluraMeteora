@@ -1,21 +1,61 @@
 <?php
+$posts = get_posts(array(
+    'numberposts'   => 9, 
+    'post_type'     => 'cm_produtos',
+    'meta_key'      => 'is_highlight',
+    'meta_value'    => true
+));
 
+$posts_information = array();
+
+foreach($posts as $post){
+	$nome = get_field('nome_produto');
+	$descricao = get_field('descricao_produto');
+	$imagem = get_field('imagem_produto');
+	$preco = get_field('preco_produto');
+
+	$preco = number_format(floatval($preco), 2, ',', '.');
+
+	array_push($posts_information, array(
+		'nome' => $nome,
+		'descricao' => $descricao,
+		'imagem' => $imagem,
+		'preco' => $preco
+		)
+	);
+}
+
+//var_dump($posts)
 ?>
 
-<!-- DESTAQUES -->
-<!-- Fazer um filtro por categora do WordPress -->
-<!-- Puxar automaticamente por categorias (Categoria -> Destaque) -->
 <section class="container">
-   <h2 class="title">Produtos que estão bombando</h2>
-   <ul>
-      <li>
+	<h2 class="title">Produtos que estão bombando</h2>
+	<ul>
+
+<?php 
+foreach($posts_information as $post) :
+?>
+		<li>
+			<article>
+				<img src="<?= $post['imagem'] ?>" alt="<?= $post['nome'] ?>" />
+				<h3><?= $post['nome'] ?></h3>
+				<p><?= $post['descricao'] ?></p>
+				<p>R$ <?= $post['preco'] ?></p>
+				<a href="">Ver mais</a>
+			</article>
+		</li>
+<?php
+endforeach
+?>
+
+      <!-- <li>
          <article>
-            <img src="" alt="" />;
+            <img src="" alt="" />
             <h3>Camiseta Conforto</h3>
             <p>Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.</p>
-            <p>70,00</p> <!-- R$ before. Calcular centavos no php-->
+            <p>70,00</p>
             <a href="">Ver mais</a>
          </article>
-      </li>
+      </li> -->
    </ul>
 </section>
