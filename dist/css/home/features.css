@@ -13,7 +13,10 @@
 
 .features li{
   display: flex;
+  align-items: center;
   gap: var(--fs-3);
+
+  margin-bottom: calc(var(--fs-3) * 1.25);
 }
 
 .features li::before{
@@ -49,8 +52,6 @@
 }
 
 .features h3 + p{
-  margin-bottom: calc(var(--fs-3) * 1.25);
-
   color: var(--white-1);
 }
 
@@ -59,5 +60,19 @@
   .features li{
     width: 50%;
     margin-inline: auto;
+  }
+}
+
+/*1040px*/
+@media (min-width: 65em){
+  .features ul{
+    display: flex;
+    gap: calc(var(--fs-3) * 1.5);
+  }
+  
+  .features li{
+    gap: calc(var(--fs-3) * .75);
+    width: auto;
+    margin-inline: unset;
   }
 }
