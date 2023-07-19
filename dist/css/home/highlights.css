@@ -2,7 +2,7 @@
   padding-block: var(--padding-top) calc(var(--padding-bottom) * 2)
 }
 
-.highlights h2{
+.highlights > h2{
   margin-bottom: min(.875em, var(--padding-top));
 
   text-align: center;
@@ -42,11 +42,42 @@
 }
 
 .highlights dialog{
-  width: 50%;
-  height: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
+  width: var(--container-width);
+  height: 90%;
+}
+
+.highlights dialog header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: .5em 1.5em .5em 1em;
+
+  font-size: var(--fs-2);
+
+  background-color: var(--black-2);
+}
+
+.highlights dialog header h2{
+  display: inline-block;
+
+  width: 14ch;
+  
+  color: var(--white-1);
+  font-weight: var(--fw-2);
+  line-height: 1.2;
+}
+
+.highlights dialog header button{
+  width: 2em;
+  height: 2em;
+  padding: unset;
+  border: none;
+  border-radius: 50%;
 }
 
 /*720px*/

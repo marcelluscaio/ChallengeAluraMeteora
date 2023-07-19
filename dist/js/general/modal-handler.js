@@ -6,8 +6,6 @@ const modalButtonsArray = Array.from(modalButtons);
 const closeModalButtonsArray = Array.from(closeModalButtons);
 const modalsArray = Array.from(modals);
 
-
-
 modalButtonsArray.forEach(button => button.addEventListener('click', (e)=> {
   const buttonKeyClass = Array.from(e.target.classList).find(className => className.startsWith('modal--'));
 
@@ -16,7 +14,7 @@ modalButtonsArray.forEach(button => button.addEventListener('click', (e)=> {
     );
 
   thisButtonsModal[0].showModal();
-}))
+}));
 
 closeModalButtonsArray.forEach(button => button.addEventListener('click', (e)=> {
   const buttonKeyClass = Array.from(e.target.classList).find(className => className.startsWith('modal--'));
@@ -26,4 +24,4 @@ closeModalButtonsArray.forEach(button => button.addEventListener('click', (e)=> 
     );
 
   thisButtonsModal[0].close();
-}))
+}));

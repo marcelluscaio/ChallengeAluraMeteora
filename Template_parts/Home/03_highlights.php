@@ -47,7 +47,10 @@ $counter++;
 				</div>
 			</article>
 			<dialog class="modal modal--<?= $counter ?>">
-				<button class="close-modal modal--<?= $counter ?>">Close</button>
+				<header>
+					<h2 class="regular-text">Confira detalhes sobre o produto</h2>
+					<button class="button button--white close-modal modal--<?= $counter ?>">X</button>
+				</header>
 				<img src="<?= $post['imagem'] ?>" alt="<?= $post['nome'] ?>" />
 				<h3 class="title title--extra-small"><?= $post['nome'] ?></h3>
 				<p class="price title title--extra-small ">R$ <?= $post['preco'] ?></p>
