@@ -1,10 +1,35 @@
 <?php
+$term = !isset($_GET["produto"]) || empty($_GET["produto"]) ? '' : $_GET["produto"];
+
+$search = !isset($_GET["search"]) || empty($_GET["search"]) ? '' : $_GET["search"];
+
 $posts = get_posts(array(
     'numberposts'   => 9, 
-    'post_type'     => 'cm_produtos',
-    'meta_key'      => 'is_highlight',
-    'meta_value'    => true
+    'post_type'     => 'cm_produtos'
 ));
+
+if($term !== ''){
+	$posts = get_posts(array(
+			'numberposts'   => 9, 
+			'post_type'     => 'cm_produtos',
+			'tax_query' => array(
+					array(
+						'taxonomy' => 'cm_types',
+						'field' => 'slug',
+						'terms' => $term,
+					)
+				)
+	));
+}
+
+if($search !== ''){
+	$posts = get_posts(array(
+			'numberposts'   => 9, 
+			'post_type'     => 'cm_produtos',
+			'meta_key'      => 'nome_produto',
+			'meta_value'    => $search
+	));
+}
 
 $posts_information = array();
 
@@ -28,13 +53,11 @@ foreach($posts as $post){
 ?>
 
 <section class="highlights container">
-	<h2 class="title">Produtos que estão bombando</h2>
+	<h2 class="title">Nossos produtos</h2>
 	<ul>
 
-<?php
-$counter = 0;
+<?php 
 foreach($posts_information as $post) :
-$counter++;
 ?>
 		<li>
 			<article>
@@ -43,23 +66,9 @@ $counter++;
 					<h3 class="title title--extra-small"><?= $post['nome'] ?></h3>
 					<p class="description regular-text regular-text--small "><?= $post['descricao'] ?></p>
 					<p class="price title title--extra-small ">R$ <?= $post['preco'] ?></p>
-					<button class="button regular-text open-modal modal--<?= $counter ?>">Ver mais</button>
+					<a class="button regular-text" href="">Ver mais</a>
 				</div>
 			</article>
-			<dialog class="modal modal--<?= $counter ?>">
-				<button class="close-modal modal--<?= $counter ?>">Close</button>
-				<img src="<?= $post['imagem'] ?>" alt="<?= $post['nome'] ?>" />
-				<h3 class="title title--extra-small"><?= $post['nome'] ?></h3>
-				<p class="price title title--extra-small ">R$ <?= $post['preco'] ?></p>
-				<form>
-					<label>Cores</label>
-					<input type="checkbox" />
-
-					<label>Tamanho:</label>
-					<input type="checkbox" />
-					<button>Adicionar à sacola</button>
-				</form>
-			</dialog>
 		</li>
 <?php
 endforeach

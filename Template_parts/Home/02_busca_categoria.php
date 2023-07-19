@@ -38,7 +38,7 @@ foreach($produtos as $produto){
 foreach($array_produtos as $produto):
 ?>
 		<li>
-				<a href="">
+				<a href="http://alurachallengemeteora.local/todos-produtos/?produto=<?= $produto['nome'] ?>">
 					<img src="<?= $produto['url'] ?>" alt="<?= $produto['nome'] ?>"/>
 					<h3 class="title title--extra-small"><?= $produto['nome'] ?></h3>
 				</a>

@@ -53,9 +53,9 @@
 	endif;
 ?>
 		</div>
-		<form>
+		<form action="todos-produtos' ?>">
 			<div class="container">
-				<input class="regular-text regular-text--small" type="text" placeholder="Digite o produto" />
+				<input class="regular-text regular-text--small" type="text" placeholder="Digite o produto"  name="search"/>
 				<button class="regular-text button button--white">Buscar</button>
 			</div>
 		</form>
