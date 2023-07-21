@@ -47,7 +47,8 @@
   transform: translate(-50%, -50%);
   
   width: var(--container-width);
-  height: 90%;
+  min-height: 90%;
+  max-height: 100dvh;
   border: none;
 }
 
@@ -74,8 +75,8 @@
 }
 
 .highlights dialog header button{
-  width: 2em;
-  height: 2em;
+  width: 1.75em;
+  height: 1.75em;
   padding: unset;
   border: none;
   border-radius: 50%;
@@ -85,8 +86,13 @@
   padding: var(--fs-2) var(--fs-2) calc(var(--fs-2) * 2) ;
 }
 
+.highlights dialog > div h3{
+  margin-block: 1.5em;
+}
+
 .highlights dialog::backdrop{
-  background: black;
+  background: var(--black-1);
+  background: #212529;
   /*Custom properties dont work?*/
 
   opacity: .5;
