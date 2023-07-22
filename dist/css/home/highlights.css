@@ -90,10 +90,14 @@
   margin-block: 1.5em;
 }
 
+.highlights dialog > div p{
+  margin-bottom: 1em;
+}
+
 .highlights dialog::backdrop{
   background: var(--black-1);
   background: #212529;
-  /*Custom properties dont work?*/
+  /*Custom properties dont work*/
 
   opacity: .5;
 }
