@@ -54,6 +54,7 @@ $counter++;
 				<div>
 					<img src="<?= $post['imagem'] ?>" alt="<?= $post['nome'] ?>" />
 					<h3 class="title title--extra-small"><?= $post['nome'] ?></h3>
+					<p class="description regular-text regular-text--small "><?= $post['descricao'] ?></p>
 					<p class="price title title--extra-small ">R$ <?= $post['preco'] ?></p>
 					<form>
 						<label>Cores</label>
