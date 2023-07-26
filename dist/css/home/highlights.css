@@ -91,7 +91,8 @@
 }
 
 .highlights dialog > div p{
-  margin-bottom: 1.375em;
+  margin-bottom: 1.5em;
+  border: 1px solid red;
 }
 
 .highlights dialog::backdrop{
