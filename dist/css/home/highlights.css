@@ -94,6 +94,7 @@
   margin-bottom: 1.5em;
   border: 1px solid red;
   font-weight: 700;
+  line-height: 3;
 }
 
 .highlights dialog::backdrop{
