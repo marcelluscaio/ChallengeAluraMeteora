@@ -93,6 +93,7 @@
 .highlights dialog > div p{
   margin-bottom: 1.5em;
   border: 1px solid red;
+  font-weight: 700;
 }
 
 .highlights dialog::backdrop{
