@@ -95,6 +95,7 @@
   border: 1px solid red;
   font-weight: 700;
   line-height: 3;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .highlights dialog::backdrop{
