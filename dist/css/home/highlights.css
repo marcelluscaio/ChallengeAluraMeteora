@@ -101,13 +101,41 @@
   padding: var(--fs-2) var(--fs-2) calc(var(--fs-2) * 2) ;
 }
 
+.highlights dialog > div img{
+  aspect-ratio: 323/402;
+}
+
 .highlights dialog > div h3{
   margin-block: 1.5em;
 }
 
-.highlights dialog > div p{
+.highlights dialog > div .description{
+  margin-bottom: 1.75em;
+}
+
+.highlights dialog > div .price{
   margin-bottom: 1.5em;
-  
+}
+
+.highlights dialog > div .description::after,
+.highlights dialog > div .price::after{
+  content: '';
+
+  display: block;
+
+  height: 1px;
+}
+
+.highlights dialog > div .description::after{
+   margin-top: 1.75em;
+
+   background-color: var(--black-2);
+}
+
+.highlights dialog > div .price::after{
+   margin-top: 1.5em;
+
+   background-color: var(--gray-1);
 }
 
 .highlights dialog::backdrop{
@@ -170,6 +198,10 @@
 
   .highlights article .button{
     align-self: flex-start;
+  }
+
+  .highlights dialog header h2{
+    width: 30ch;
   }
 }
 
