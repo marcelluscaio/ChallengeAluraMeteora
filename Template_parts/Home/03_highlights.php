@@ -16,14 +16,25 @@ foreach($posts as $post){
 
 	$preco = number_format(floatval($preco), 2, ',', '.');
 
+	$cores_objeto = get_the_terms($post, 'cm_colors');
+	$cores = array();
+	foreach($cores_objeto as $cor){
+		array_push($cores, $cor->name);
+	}
+
 	array_push($posts_information, array(
 		'nome' => $nome,
 		'descricao' => $descricao,
 		'imagem' => $imagem,
-		'preco' => $preco
+		'preco' => $preco,
+		'cores' => $cores
 		)
 	);
+
+	
 }
+
+
 
 ?>
 
@@ -57,9 +68,17 @@ $counter++;
 					<p class="description regular-text regular-text--small "><?= $post['descricao'] ?></p>
 					<p class="price title title--extra-small ">R$ <?= $post['preco'] ?></p>
 					<form>
-						<label>Cores</label>
-						<input type="checkbox" />
-
+						<h4>Cores</h4>
+						
+<?php 
+foreach($post['cores'] as $cor):
+	$input_id = "input-".$cor."-".str_replace(' ', '-', $post['nome']);
+?>
+						<label for="<?= $input_id ?>"><?= $cor ?></label>
+						<input type="checkbox" value="<?= $cor ?>" id="<?= $input_id ?>" />
+<?php 
+endforeach;
+?>
 						<label>Tamanho:</label>
 						<input type="checkbox" />
 						<button>Adicionar à sacola</button>

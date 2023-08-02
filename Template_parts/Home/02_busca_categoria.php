@@ -1,7 +1,7 @@
 <?php
 //QUando clicar em uma categoria, quero mostrar todos os posts daquela categoria
 //fazer requisicao mostrando somente aqueles produtos
-$query = new WP_Query(
+/* $query = new WP_Query(
 	array('post_type'=>'cm_produtos' ,
 				'tax_query' => array(
 					array(
@@ -17,7 +17,7 @@ while($query->have_posts()){
 	$query->the_post();
 	$post = $query->post;
 	$title = $query->post->post_title;
-}
+} */
 
 //Mostra todos os tipos de produto
 $produtos = get_terms('cm_types');
