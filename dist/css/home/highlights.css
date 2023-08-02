@@ -65,13 +65,28 @@
 }
 
 .highlights dialog header h2{
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 1.125em;
 
-  width: 14ch;
+  width: 17ch;
   
   color: var(--white-1);
   font-weight: var(--fw-2);
   line-height: 1.2;
+}
+
+.highlights dialog header h2::before{
+  content: '';
+
+  display: inline-block;
+
+  height: 1.75em;
+  aspect-ratio: 1;
+
+  background-image: url('../../../assets/images/check-circle.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .highlights dialog header button{
@@ -92,13 +107,7 @@
 
 .highlights dialog > div p{
   margin-bottom: 1.5em;
-  border: 1px solid red;
-  font-weight: 700;
-  line-height: 3;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 50px;
-  background-color: blue;
-  color: red;
+  
 }
 
 .highlights dialog::backdrop{
@@ -115,7 +124,7 @@
     padding-block: var(--padding-top) calc(var(--padding-bottom) * 9)
   }
 
-  .highlights h2{
+  .highlights > h2{
     margin-bottom: min(1em, var(--padding-top));
   }
 
