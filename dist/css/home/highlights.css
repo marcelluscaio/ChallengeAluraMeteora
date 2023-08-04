@@ -124,18 +124,37 @@
   display: block;
 
   height: 1px;
+  margin-top: 1em;
 }
 
 .highlights dialog > div .description::after{
-   margin-top: 1.75em;
-
-   background-color: var(--black-2);
+  background-color: var(--black-2);
 }
 
 .highlights dialog > div .price::after{
-   margin-top: 1.5em;
+  background-color: var(--gray-1);
+}
 
-   background-color: var(--gray-1);
+.highlights dialog form .modal__form__color{
+  display: flex;
+  align-items: center;
+  gap: calc(var(--fs-1) / 2);
+
+  margin-bottom: calc(var(--fs-1) / 2);
+}
+
+.highlights dialog form .modal__form__color:last-of-type{
+  margin-bottom: var(--fs-1);
+}
+
+.highlights dialog form .modal__form__color input[type="radio"]{
+  
+  width: var(--fs-1);
+  aspect-ratio: 1;
+  border: 1px solid var(--gray-1);
+  border-radius: 50%;
+
+  appearance: none;
 }
 
 .highlights dialog::backdrop{

@@ -45,8 +45,12 @@ foreach($todas_as_cores as $cor) :
 $classe = '.input-'.strtolower(str_replace(' ', '-', $cor->name));
 $hexa_cor = get_field('cor','cm_colors'.'_'.$cor->term_id);
 ?>
-<?= $classe ?>{
-	accent-color: <?= $hexa_cor ?>
+<?= $classe ?>:checked{
+	background-color: <?= $hexa_cor ?>;
+}
+
+label<?= $classe ?>:hover{
+	color: <?= $hexa_cor ?>;
 }
 
 <?php 
@@ -88,12 +92,14 @@ $counter++;
 						
 <?php 
 foreach($post['cores'] as $cor):
-	$input_name = "input-".str_replace(' ', '-', $post['nome']);
-	$input_id = "input-".$cor."-".str_replace(' ', '-', $post['nome']);
+	$input_name = "input-".strtolower(str_replace(' ', '-', $post['nome']));
+	$input_id = "input-".$cor."-".strtolower(str_replace(' ', '-', $post['nome']));
 	$input_class = 'input-'.strtolower(str_replace(' ', '-', $cor));
 ?>
-						<label for="<?= $input_id ?>"><?= $cor ?></label>
-						<input type="radio" value="<?= $cor ?>" id="<?= $input_id ?>" class="<?= $input_class ?>" name="<?= $input_name ?>" />
+						<div class="modal__form__color">
+							<label for="<?= $input_id ?>" class="<?= $input_class ?> regular-text regular-text--small"><?= $cor ?></label>
+							<input type="radio" value="<?= $cor ?>" id="<?= $input_id ?>" class="<?= $input_class ?>" name="<?= $input_name ?>" />
+						</div>
 <?php 
 endforeach;
 ?>
