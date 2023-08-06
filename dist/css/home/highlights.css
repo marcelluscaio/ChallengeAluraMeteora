@@ -135,7 +135,7 @@
   background-color: var(--gray-1);
 }
 
-.highlights dialog form .modal__form__color{
+.highlights dialog form .modal__form__color-size{
   display: flex;
   align-items: center;
   gap: calc(var(--fs-1) / 2);
@@ -143,11 +143,11 @@
   margin-bottom: calc(var(--fs-1) / 2);
 }
 
-.highlights dialog form .modal__form__color:last-of-type{
+.highlights dialog form .modal__form__color-size:last-of-type{
   margin-bottom: var(--fs-1);
 }
 
-.highlights dialog form .modal__form__color input[type="radio"]{
+.highlights dialog form .modal__form__color-size input[type="radio"]{
   
   width: var(--fs-1);
   aspect-ratio: 1;

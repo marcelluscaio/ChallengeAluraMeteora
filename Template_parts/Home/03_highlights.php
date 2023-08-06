@@ -19,10 +19,17 @@ foreach($posts as $post){
 	$preco = number_format(floatval($preco), 2, ',', '.');
 
 //getting product's color
-	$cores_objeto = get_the_terms($post, 'cm_colors');
+	$cores_object = get_the_terms($post, 'cm_colors');
 	$cores = array();
-	foreach($cores_objeto as $cor){
+	foreach($cores_object as $cor){
 		array_push($cores, $cor->name);
+	}
+
+	//getting product's size
+	$sizes_object = get_the_terms($post, 'cm_sizes');
+	$sizes = array();
+	foreach($sizes_object as $size){
+		array_push($sizes, $size->name);
 	}
 
 	array_push($posts_information, array(
@@ -30,7 +37,8 @@ foreach($posts as $post){
 		'descricao' => $descricao,
 		'imagem' => $imagem,
 		'preco' => $preco,
-		'cores' => $cores
+		'cores' => $cores,
+		'sizes' => $sizes
 		)
 	);
 }
@@ -96,15 +104,25 @@ foreach($post['cores'] as $cor):
 	$input_id = "input-".$cor."-".strtolower(str_replace(' ', '-', $post['nome']));
 	$input_class = 'input-'.strtolower(str_replace(' ', '-', $cor));
 ?>
-						<div class="modal__form__color">
+						<div class="modal__form__color-size">
 							<label for="<?= $input_id ?>" class="<?= $input_class ?> regular-text regular-text--small"><?= $cor ?></label>
 							<input type="radio" value="<?= $cor ?>" id="<?= $input_id ?>" class="<?= $input_class ?>" name="<?= $input_name ?>" />
 						</div>
 <?php 
 endforeach;
 ?>
-						<label>Tamanho:</label>
-						<input type="checkbox" />
+						<h4>Tamanho:</h4>
+<?php 
+foreach($post['sizes'] as $size):
+$input_name = "input-size-".strtolower(str_replace(' ', '-', $post['nome']));
+?>
+						<div class="modal__form__color-size">
+							<label><?= $size ?></label>
+							<input type="radio" value="<?= $size ?>" name="<?= $input_name ?>" />
+						</div>
+<?php 
+endforeach
+?>
 						<button>Adicionar à sacola</button>
 					</form>
 				</div>
