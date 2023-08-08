@@ -163,7 +163,6 @@
   /*Custom properties dont work*/
 
   opacity: .5;
-  opacity: 1;
 }
 
 /*720px*/
@@ -222,6 +221,10 @@
 
   .highlights dialog header h2{
     width: 30ch;
+  }
+
+  .highlights dialog > div{
+    display: flex;
   }
 }
 
