@@ -13,7 +13,8 @@
   /*Equal to highlights h2*/
 }
 
-.highlights article img{
+.highlights article img,
+.highlights dialog > div img{
   width: 100%;
   aspect-ratio: 323/402;
 }
@@ -42,13 +43,12 @@
 }
 
 .highlights dialog{
-  top: 50%;
+  top: 5%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   
   width: var(--container-width);
-  min-height: 90%;
-  max-height: 100dvh;
+  max-height: 90dvh;
   border: none;
 }
 
@@ -101,9 +101,6 @@
   padding: var(--fs-2) var(--fs-2) calc(var(--fs-2) * 2) ;
 }
 
-.highlights dialog > div img{
-  aspect-ratio: 323/402;
-}
 
 .highlights dialog > div h3{
   margin-block: 1.5em;
@@ -157,6 +154,10 @@
   appearance: none;
 }
 
+.modal__form__color-size input:checked{
+  background-color: var(--purple-1);
+}
+
 .highlights dialog::backdrop{
   background: var(--black-1);
   background: #212529;
@@ -200,7 +201,8 @@
     height: 100%;
   }
 
-  .highlights article img{
+  .highlights article img,
+  .highlights dialog > div img{
     aspect-ratio: 330/389;
   }
 
@@ -239,7 +241,12 @@
     gap: 2vw;
   }
 
-  .highlights article img{
+  .highlights article img,
+  .highlights dialog > div img{
     aspect-ratio: 350/422;
+  }
+
+  .highlights dialog{
+    width: 75%;
   }
 }
