@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const modalButtons = document.querySelectorAll(".open-modal");
 const closeModalButtons = document.querySelectorAll(".close-modal");
 const modals =  document.querySelectorAll(".modal");
@@ -14,6 +15,7 @@ modalButtonsArray.forEach(button => button.addEventListener('click', (e)=> {
     );
 
   thisButtonsModal[0].showModal();
+  body.style.overflow = "hidden";
 }));
 
 closeModalButtonsArray.forEach(button => button.addEventListener('click', (e)=> {
@@ -24,4 +26,5 @@ closeModalButtonsArray.forEach(button => button.addEventListener('click', (e)=> 
     );
 
   thisButtonsModal[0].close();
+  body.style.overflow = "unset";
 }));

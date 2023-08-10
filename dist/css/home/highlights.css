@@ -201,8 +201,7 @@
     height: 100%;
   }
 
-  .highlights article img,
-  .highlights dialog > div img{
+  .highlights article img{
     aspect-ratio: 330/389;
   }
 
@@ -232,6 +231,11 @@
 
   .highlights dialog > div > img{
     width: 53%;
+    height: 71dvh;
+    aspect-ratio: unset;
+    
+    object-fit: cover;
+    object-position: top;
   }
 
   .highlights dialog > div > div{
@@ -250,8 +254,7 @@
     gap: 2vw;
   }
 
-  .highlights article img,
-  .highlights dialog > div img{
+  .highlights article img{
     aspect-ratio: 350/422;
   }
 
