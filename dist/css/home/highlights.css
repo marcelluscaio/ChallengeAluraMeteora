@@ -227,6 +227,15 @@
 
   .highlights dialog > div{
     display: flex;
+    gap: var(--fs-2);
+  }
+
+  .highlights dialog > div > img{
+    width: 53%;
+  }
+
+  .highlights dialog > div > div{
+    width: 47%;
   }
 }
 
