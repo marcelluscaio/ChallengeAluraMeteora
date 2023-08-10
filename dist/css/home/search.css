@@ -14,9 +14,23 @@
   gap: 4vw 8vw;
 }
 
+.search__items a{
+  display: inline-block;
+
+  overflow: hidden;
+}
+
 .search__items img{
   width: 100%;
   aspect-ratio: 146 / 192;
+
+  transform-origin: bottom left;
+  transition: transform .75s ease-in-out;
+}
+
+.search__items a:hover img{
+  transform: scale(1.075);
+  
 }
 
 .search__items h3{

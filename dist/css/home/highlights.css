@@ -13,10 +13,21 @@
   /*Equal to highlights h2*/
 }
 
+.highlights article{
+  overflow: hidden;
+}
+
 .highlights article img,
 .highlights dialog > div img{
   width: 100%;
   aspect-ratio: 323/402;
+
+  transform-origin: bottom left;
+  transition: transform .75s ease-in-out;
+}
+
+.highlights article:hover > img{
+  transform: scale(1.075);
 }
 
 .highlights article > div{

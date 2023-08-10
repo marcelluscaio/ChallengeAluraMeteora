@@ -47,6 +47,10 @@
   font-size: var(--fs-1);
 }
 
+.mailing fieldset button{
+  cursor: pointer;
+}
+
 /*720px*/
 @media (min-width: 45em){
   .mailing form{
