@@ -166,6 +166,10 @@
   color: var(--gray-1);
 }
 
+.header form button{
+  cursor: pointer;
+}
+
  /*720px*/
  @media (min-width: 45em){
   .header__desktop-container{

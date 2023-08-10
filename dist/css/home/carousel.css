@@ -72,6 +72,8 @@
   background-image: url('../../../assets/images/icon-arrow.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
+
+  cursor: pointer;
 }
 
 .carousel__controls__arrows > button.arrow--left{

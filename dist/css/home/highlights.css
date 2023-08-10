@@ -40,6 +40,8 @@
 
 .highlights article .button{
   display: inline-block;
+
+  cursor: pointer;
 }
 
 .highlights dialog{
@@ -95,6 +97,7 @@
   padding: unset;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .highlights dialog > div{
@@ -152,10 +155,15 @@
   border-radius: 50%;
 
   appearance: none;
+  cursor: pointer;
 }
 
 .modal__form__color-size input:checked{
   background-color: var(--purple-1);
+}
+
+.highlights dialog form .button{
+  cursor: pointer;
 }
 
 .highlights dialog::backdrop{
