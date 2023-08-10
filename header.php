@@ -21,13 +21,16 @@
 			'echo' => false
 		)
 	);
+	$home_url = get_home_url()
 ?>
 
 <header class="header">
 	<div class="header__desktop-container container">
 		<div class="header__mobile-container container">
 			<!-- Colocar dinamicamente no painel administrativo -->
-			<img class= "header__logo" src=<?= $header_logo ?> alt="" />
+			<a href="<?= $home_url ?>">
+				<img class= "header__logo" src=<?= $header_logo ?> alt="" />
+			</a>
 <?php
 	if(has_nav_menu('primary')) :
 ?>
