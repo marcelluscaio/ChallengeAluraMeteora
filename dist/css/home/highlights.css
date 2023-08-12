@@ -53,6 +53,11 @@
   display: inline-block;
 
   cursor: pointer;
+  transition: opacity .5s ease-in;
+}
+
+.highlights article .button:hover{
+  opacity: .5;
 }
 
 .highlights dialog{

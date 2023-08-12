@@ -168,6 +168,12 @@
 
 .header form button{
   cursor: pointer;
+
+  transition: opacity .5s ease-in;
+}
+
+.header form button:hover{
+  opacity: .5;
 }
 
  /*720px*/
