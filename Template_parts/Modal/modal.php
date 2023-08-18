@@ -46,7 +46,7 @@ endforeach;
 <?php 
 foreach($sizes as $size):
 $input_name = "input-size-".strtolower(str_replace(' ', '-', $post['nome']));
-get_template_part("Template_parts/Modal/modal__options","",array())
+//get_template_part("Template_parts/Modal/modal__options","",array())
 ?>
 							<div class="modal__form__color-size">
 								<label class="regular-text regular-text--small"><?= $size ?></label>
