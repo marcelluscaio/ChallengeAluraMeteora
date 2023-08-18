@@ -85,6 +85,18 @@ $counter++;
 					<button class="button regular-text open-modal modal--<?= $counter ?>">Ver mais</button>
 				</div>
 			</article>
+			<?php get_template_part('Template_parts/Modal/modal', '', 
+				array(
+					'counter' => $counter,
+					'imagem' => $post['imagem']
+				)
+			) ?>
+
+
+
+			<?php 
+				if(1>2):
+			?>
 			<dialog class="modal modal--<?= $counter ?>">
 				<header>
 					<h2 class="regular-text">Confira detalhes sobre o produto</h2>
@@ -129,6 +141,9 @@ endforeach
 					</div>
 				</div>
 			</dialog>
+		<?php
+			endif
+		?>
 		</li>
 <?php
 endforeach

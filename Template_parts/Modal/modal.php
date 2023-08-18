@@ -1,11 +1,12 @@
 <?php 
-  $counter;
+ /*  $counter;
   $imagem;
   $descricao;
   $nome;
   $preco;
   $cores;
-  $sizes;
+  $sizes; */
+	$counter = $args['counter'];
 ?>
 
 <dialog class="modal modal--<?= $counter ?>">
