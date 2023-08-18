@@ -7,6 +7,12 @@
   $cores;
   $sizes; */
 	$counter = $args['counter'];
+	$imagem = $args['imagem'];
+	$nome = $args['nome'];
+	$descricao = $args['descricao'];
+	$preco = $args['preco'];
+	$cores = $args['cores'];
+	$sizes = $args['sizes'];
 ?>
 
 <dialog class="modal modal--<?= $counter ?>">
@@ -15,16 +21,16 @@
 					<button class="button button--white close-modal modal--<?= $counter ?>">X</button>
 				</header>
 				<div>
-					<img src="<?= $post['imagem'] ?>" alt="<?= $post['nome'] ?>" />
+					<img src="<?= $imagem ?>" alt="<?= $nome ?>" />
 					<div>
-						<h3 class="title title--extra-small"><?= $post['nome'] ?></h3>
-						<p class="description regular-text regular-text--small "><?= $post['descricao'] ?></p>
-						<p class="price title title--extra-small ">R$ <?= $post['preco'] ?></p>
+						<h3 class="title title--extra-small"><?= $nome ?></h3>
+						<p class="description regular-text regular-text--small "><?= $descricao ?></p>
+						<p class="price title title--extra-small ">R$ <?= $preco ?></p>
 						<form>
 							<h4 class="title title--extra-small regular-text--small">Cores</h4>
 						
 <?php 
-foreach($post['cores'] as $cor):
+foreach($cores as $cor):
 	$input_name = "input-".strtolower(str_replace(' ', '-', $post['nome']));
 	$input_id = "input-".$cor."-".strtolower(str_replace(' ', '-', $post['nome']));
 	$input_class = 'input-'.strtolower(str_replace(' ', '-', $cor));
@@ -38,7 +44,7 @@ endforeach;
 ?>
 							<h4 class="title title--extra-small regular-text--small">Tamanho:</h4>
 <?php 
-foreach($post['sizes'] as $size):
+foreach($sizes as $size):
 $input_name = "input-size-".strtolower(str_replace(' ', '-', $post['nome']));
 get_template_part("Template_parts/Modal/modal__options","",array())
 ?>

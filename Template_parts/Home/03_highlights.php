@@ -88,7 +88,12 @@ $counter++;
 			<?php get_template_part('Template_parts/Modal/modal', '', 
 				array(
 					'counter' => $counter,
-					'imagem' => $post['imagem']
+					'imagem' => $post['imagem'],
+					'nome' => $post['nome'],
+					'descricao' => $post['descricao'],
+					'preco' => $post['preco'],
+					'cores' => $post['cores'],
+					'sizes' => $post['sizes'],
 				)
 			) ?>
 
