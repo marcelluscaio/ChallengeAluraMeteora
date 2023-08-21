@@ -1,11 +1,4 @@
 <?php 
- /*  $counter;
-  $imagem;
-  $descricao;
-  $nome;
-  $preco;
-  $cores;
-  $sizes; */
 	$counter = $args['counter'];
 	$imagem = $args['imagem'];
 	$nome = $args['nome'];
@@ -16,47 +9,37 @@
 ?>
 
 <dialog class="modal modal--<?= $counter ?>">
-				<header>
-					<h2 class="regular-text">Confira detalhes sobre o produto</h2>
-					<button class="button button--white close-modal modal--<?= $counter ?>">X</button>
-				</header>
-				<div>
-					<img src="<?= $imagem ?>" alt="<?= $nome ?>" />
-					<div>
-						<h3 class="title title--extra-small"><?= $nome ?></h3>
-						<p class="description regular-text regular-text--small "><?= $descricao ?></p>
-						<p class="price title title--extra-small ">R$ <?= $preco ?></p>
-						<form>
-							<h4 class="title title--extra-small regular-text--small">Cores</h4>
-						
-<?php 
-foreach($cores as $cor):
-	$input_name = "input-".strtolower(str_replace(' ', '-', $post['nome']));
-	$input_id = "input-".$cor."-".strtolower(str_replace(' ', '-', $post['nome']));
-	$input_class = 'input-'.strtolower(str_replace(' ', '-', $cor));
+	<header>
+		<h2 class="regular-text">Confira detalhes sobre o produto</h2>
+		<button class="button button--white close-modal modal--<?= $counter ?>">X</button>
+	</header>
+	<div>
+		<img src="<?= $imagem ?>" alt="<?= $nome ?>" />
+		<div>
+			<h3 class="title title--extra-small"><?= $nome ?></h3>
+			<p class="description regular-text regular-text--small "><?= $descricao ?></p>
+			<p class="price title title--extra-small ">R$ <?= $preco ?></p>
+			<form>
+<?php
+	get_template_part('Template_parts/Modal/modal__options', '', 
+		array(
+			"title" => "Cores",
+			"feature_list" => $cores,
+			"product" => $nome
+		)
+	)
 ?>
-							<div class="modal__form__color-size">
-								<label for="<?= $input_id ?>" class="<?= $input_class ?> regular-text regular-text--small"><?= $cor ?></label>
-								<input type="radio" value="<?= $cor ?>" id="<?= $input_id ?>" class="<?= $input_class ?>" name="<?= $input_name ?>" />
-							</div>
-<?php 
-endforeach;
+<?php
+	get_template_part('Template_parts/Modal/modal__options', '', 
+		array(
+			"title" => "Tamanho",
+			"feature_list" => $sizes,
+			"product" => $nome
+		)
+	)
 ?>
-							<h4 class="title title--extra-small regular-text--small">Tamanho:</h4>
-<?php 
-foreach($sizes as $size):
-$input_name = "input-size-".strtolower(str_replace(' ', '-', $post['nome']));
-//get_template_part("Template_parts/Modal/modal__options","",array())
-?>
-							<div class="modal__form__color-size">
-								<label class="regular-text regular-text--small"><?= $size ?></label>
-								<input type="radio" value="<?= $size ?>" name="<?= $input_name ?>" />
-							</div>
-<?php 
-endforeach
-?>
-							<button class="button">Adicionar à sacola</button>
-						</form>
-					</div>
-				</div>
-			</dialog>
+				<button class="button">Adicionar à sacola</button>
+			</form>
+		</div>
+	</div>
+</dialog>

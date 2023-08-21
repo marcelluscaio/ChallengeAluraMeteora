@@ -1,15 +1,22 @@
-<h4 class="title title--extra-small regular-text--small">Cores</h4>
+<?php 
+	$title = $args["title"];
+	$feature_list = $args["feature_list"];
+	$product = $args["product"];
+?>
+
+<h4 class="title title--extra-small regular-text--small"><?= $title ?>:</h4>
 						
 <?php 
-foreach($post['cores'] as $cor):
-	$input_name = "input-".strtolower(str_replace(' ', '-', $post['nome']));
-	$input_id = "input-".$cor."-".strtolower(str_replace(' ', '-', $post['nome']));
-	$input_class = 'input-'.strtolower(str_replace(' ', '-', $cor));
+foreach($feature_list as $feature):
+	$input_name = "input-".strtolower(str_replace(' ', '-', $product)).strtolower(str_replace(' ', '-', $title));
+	$input_id = "input-".$feature."-".strtolower(str_replace(' ', '-', $product));
+	$input_class = 'input-'.strtolower(str_replace(' ', '-', $feature));
 ?>
-							<div class="modal__form__color-size">
-								<label for="<?= $input_id ?>" class="<?= $input_class ?> regular-text regular-text--small"><?= $cor ?></label>
-								<input type="radio" value="<?= $cor ?>" id="<?= $input_id ?>" class="<?= $input_class ?>" name="<?= $input_name ?>" />
-							</div>
+
+	<div class="modal__form__color-size">
+		<label for="<?= $input_id ?>" class="<?= $input_class ?> regular-text regular-text--small"><?= $feature ?></label>
+		<input type="radio" value="<?= $feature ?>" id="<?= $input_id ?>" class="<?= $input_class ?>" name="<?= $input_name ?>" />
+	</div>
 
 <?php 
 endforeach;
