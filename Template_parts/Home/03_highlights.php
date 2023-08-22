@@ -84,6 +84,7 @@ $counter++;
 					<button class="button regular-text open-modal modal--<?= $counter ?>">Ver mais</button>
 				</div>
 			</article>
+			
 <?php 
 get_template_part('Template_parts/Modal/modal', '', 
 	array(
