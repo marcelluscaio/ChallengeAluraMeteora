@@ -15,6 +15,27 @@ foreach($posts as $post){
 	$imagem = get_field('imagem_produto');
 	$preco = get_field('preco_produto');
 	$preco = number_format(floatval($preco), 2, ',', '.');
+	
+	//gets all product types
+	$product_instances = [];
+	$counter = 1;
+	$iterator = 'tipo_produto_'.$counter;
+	while(gettype(get_field($iterator)) === "array"){
+		array_push($product_instances, 
+			array(
+				"cor" => get_field($iterator)["cor_tipo_produto"]->name,
+				"tamanho" => get_field($iterator)["tamanho_tipo_produto"],
+				"quantidade" => get_field($iterator)["quantidade_tipo_produto"]
+			)
+		);
+		$counter++;
+		$iterator = 'tipo_produto_'.$counter;
+	};
+	var_dump($product_instances);
+	var_dump(get_field('tipo_produto_1')["cor_tipo_produto"]);
+	var_dump(get_field('tipo_produto_1')["tamanho_tipo_produto"]);
+	var_dump(get_field('tipo_produto_1')["quantidade_tipo_produto"]);
+
 
 //getting product's color - Custom taxonomy
 	$cores_object = get_the_terms($post, 'cm_colors');
