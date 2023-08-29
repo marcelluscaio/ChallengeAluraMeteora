@@ -40,8 +40,9 @@
 	)
 ?>
 <?php 
-foreach($product_instances as $instance)
-	echo $instance["quantidade"]." ".$nome." ".$instance["cor"]." ".$instance["tamanho"];
+
+/* foreach($product_instances as $instance)
+	echo $instance["quantidade"]." ".$nome." ".$instance["cor"]." ".$instance["tamanho"]; */
 
 ?>
 				<button class="button">Adicionar à sacola</button>

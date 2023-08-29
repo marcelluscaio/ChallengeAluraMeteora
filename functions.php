@@ -105,9 +105,13 @@ function cm_add_script(){
 	wp_register_script('cm_modal_handler', get_template_directory_uri().'/dist/js/general/modal-handler.js');
 	wp_enqueue_script('cm_modal_handler', '', array(), '', true);
 
+	wp_register_script('cm_product_information', get_template_directory_uri().'/dist/js/general/product-information.js');
+	wp_enqueue_script('cm_product_information', '', array(), '', true);
+
 	wp_register_script('cm_carousel', get_template_directory_uri().'/dist/js/home/carousel.js');
 	wp_enqueue_script('cm_carousel', '', array(), '', true);
 }
+
 add_action('wp_enqueue_scripts', 'cm_add_script');
 
 

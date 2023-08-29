@@ -38,6 +38,13 @@ foreach($posts as $post){
 		$iterator = 'tipo_produto_'.$counter;
 	};
 
+	//generate array
+	$array_name_instances = [$nome, $product_instances];
+	$array_json = json_encode($array_name_instances);
+	$file_path = get_theme_root()."/meteora/dist/js/general/product-information.js";
+	file_put_contents($file_path, file_get_contents($file_path).$array_json);
+
+
 
 //getting product's color - Custom taxonomy
 	$cores_object = get_the_terms($post, 'cm_colors');
