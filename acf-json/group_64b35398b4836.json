@@ -213,7 +213,7 @@
             ]
         },
         {
-            "key": "field_64b463df24769",
+            "key": "field_64ee1fd4dd515",
             "label": "Tipo",
             "name": "tipo_produto_2",
             "aria-label": "",
@@ -229,7 +229,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_64b463df2476a",
+                    "key": "field_64ee1fd5dd516",
                     "label": "Cor",
                     "name": "cor_tipo_produto",
                     "aria-label": "",
@@ -246,13 +246,13 @@
                     "add_term": 0,
                     "save_terms": 0,
                     "load_terms": 0,
-                    "return_format": "",
+                    "return_format": "object",
                     "field_type": "radio",
                     "allow_null": 0,
                     "multiple": 0
                 },
                 {
-                    "key": "field_64b463df2476b",
+                    "key": "field_64ee1fd5dd517",
                     "label": "Tamanho",
                     "name": "tamanho_tipo_produto",
                     "aria-label": "",
@@ -269,13 +269,13 @@
                     "add_term": 0,
                     "save_terms": 0,
                     "load_terms": 0,
-                    "return_format": "",
+                    "return_format": "object",
                     "field_type": "radio",
                     "allow_null": 0,
                     "multiple": 0
                 },
                 {
-                    "key": "field_64b463df2476c",
+                    "key": "field_64ee1fd5dd518",
                     "label": "Quantidade",
                     "name": "quantidade_tipo_produto",
                     "aria-label": "",
@@ -299,7 +299,7 @@
             ]
         },
         {
-            "key": "field_64b463e62476d",
+            "key": "field_64ee214796f20",
             "label": "Tipo",
             "name": "tipo_produto_3",
             "aria-label": "",
@@ -315,7 +315,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_64b463e62476e",
+                    "key": "field_64ee214796f21",
                     "label": "Cor",
                     "name": "cor_tipo_produto",
                     "aria-label": "",
@@ -332,13 +332,13 @@
                     "add_term": 0,
                     "save_terms": 0,
                     "load_terms": 0,
-                    "return_format": "",
+                    "return_format": "object",
                     "field_type": "radio",
                     "allow_null": 0,
                     "multiple": 0
                 },
                 {
-                    "key": "field_64b463e62476f",
+                    "key": "field_64ee214796f22",
                     "label": "Tamanho",
                     "name": "tamanho_tipo_produto",
                     "aria-label": "",
@@ -355,13 +355,13 @@
                     "add_term": 0,
                     "save_terms": 0,
                     "load_terms": 0,
-                    "return_format": "",
+                    "return_format": "object",
                     "field_type": "radio",
                     "allow_null": 0,
                     "multiple": 0
                 },
                 {
-                    "key": "field_64b463e624770",
+                    "key": "field_64ee214796f23",
                     "label": "Quantidade",
                     "name": "quantidade_tipo_produto",
                     "aria-label": "",
@@ -385,7 +385,7 @@
             ]
         },
         {
-            "key": "field_64b463eb24771",
+            "key": "field_64ee33424ec32",
             "label": "Tipo",
             "name": "tipo_produto_4",
             "aria-label": "",
@@ -401,7 +401,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_64b463eb24772",
+                    "key": "field_64ee33424ec33",
                     "label": "Cor",
                     "name": "cor_tipo_produto",
                     "aria-label": "",
@@ -418,13 +418,13 @@
                     "add_term": 0,
                     "save_terms": 0,
                     "load_terms": 0,
-                    "return_format": "",
+                    "return_format": "object",
                     "field_type": "radio",
                     "allow_null": 0,
                     "multiple": 0
                 },
                 {
-                    "key": "field_64b463eb24773",
+                    "key": "field_64ee33424ec34",
                     "label": "Tamanho",
                     "name": "tamanho_tipo_produto",
                     "aria-label": "",
@@ -441,13 +441,13 @@
                     "add_term": 0,
                     "save_terms": 0,
                     "load_terms": 0,
-                    "return_format": "",
+                    "return_format": "object",
                     "field_type": "radio",
                     "allow_null": 0,
                     "multiple": 0
                 },
                 {
-                    "key": "field_64b463eb24774",
+                    "key": "field_64ee33424ec35",
                     "label": "Quantidade",
                     "name": "quantidade_tipo_produto",
                     "aria-label": "",
@@ -471,7 +471,7 @@
             ]
         },
         {
-            "key": "field_64b463ed24775",
+            "key": "field_64ee386b0d488",
             "label": "Tipo",
             "name": "tipo_produto_5",
             "aria-label": "",
@@ -487,437 +487,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_64b463ed24776",
-                    "label": "Cor",
-                    "name": "cor_tipo_produto",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "cm_colors",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "",
-                    "field_type": "radio",
-                    "allow_null": 0,
-                    "multiple": 0
-                },
-                {
-                    "key": "field_64b463ed24777",
-                    "label": "Tamanho",
-                    "name": "tamanho_tipo_produto",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "cm_sizes",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "",
-                    "field_type": "radio",
-                    "allow_null": 0,
-                    "multiple": 0
-                },
-                {
-                    "key": "field_64b463ed24778",
-                    "label": "Quantidade",
-                    "name": "quantidade_tipo_produto",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
-        },
-        {
-            "key": "field_64b463ef24779",
-            "label": "Tipo",
-            "name": "tipo_produto_6",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_64b463f02477a",
-                    "label": "Cor",
-                    "name": "cor_tipo_produto",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "cm_colors",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "",
-                    "field_type": "radio",
-                    "allow_null": 0,
-                    "multiple": 0
-                },
-                {
-                    "key": "field_64b463f02477b",
-                    "label": "Tamanho",
-                    "name": "tamanho_tipo_produto",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "cm_sizes",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "",
-                    "field_type": "radio",
-                    "allow_null": 0,
-                    "multiple": 0
-                },
-                {
-                    "key": "field_64b463f02477c",
-                    "label": "Quantidade",
-                    "name": "quantidade_tipo_produto",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
-        },
-        {
-            "key": "field_64b463f42477d",
-            "label": "Tipo",
-            "name": "tipo_produto_7",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_64b463f42477e",
-                    "label": "Cor",
-                    "name": "cor_tipo_produto",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "cm_colors",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "",
-                    "field_type": "radio",
-                    "allow_null": 0,
-                    "multiple": 0
-                },
-                {
-                    "key": "field_64b463f42477f",
-                    "label": "Tamanho",
-                    "name": "tamanho_tipo_produto",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "cm_sizes",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "",
-                    "field_type": "radio",
-                    "allow_null": 0,
-                    "multiple": 0
-                },
-                {
-                    "key": "field_64b463f524780",
-                    "label": "Quantidade",
-                    "name": "quantidade_tipo_produto",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
-        },
-        {
-            "key": "field_64b463f824781",
-            "label": "Tipo",
-            "name": "tipo_produto_8",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_64b463f824782",
-                    "label": "Cor",
-                    "name": "cor_tipo_produto",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "cm_colors",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "",
-                    "field_type": "radio",
-                    "allow_null": 0,
-                    "multiple": 0
-                },
-                {
-                    "key": "field_64b463f824783",
-                    "label": "Tamanho",
-                    "name": "tamanho_tipo_produto",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "cm_sizes",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "",
-                    "field_type": "radio",
-                    "allow_null": 0,
-                    "multiple": 0
-                },
-                {
-                    "key": "field_64b463f824784",
-                    "label": "Quantidade",
-                    "name": "quantidade_tipo_produto",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
-        },
-        {
-            "key": "field_64b463fb24785",
-            "label": "Tipo",
-            "name": "tipo_produto_9",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_64b463fb24786",
-                    "label": "Cor",
-                    "name": "cor_tipo_produto",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "cm_colors",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "",
-                    "field_type": "radio",
-                    "allow_null": 0,
-                    "multiple": 0
-                },
-                {
-                    "key": "field_64b463fb24787",
-                    "label": "Tamanho",
-                    "name": "tamanho_tipo_produto",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "cm_sizes",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "",
-                    "field_type": "radio",
-                    "allow_null": 0,
-                    "multiple": 0
-                },
-                {
-                    "key": "field_64b463fb24788",
-                    "label": "Quantidade",
-                    "name": "quantidade_tipo_produto",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
-        },
-        {
-            "key": "field_64b463fe24789",
-            "label": "Tipo",
-            "name": "tipo_produto_10",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_64b463fe2478a",
+                    "key": "field_64ee386b0d489",
                     "label": "Cor",
                     "name": "cor_tipo_produto",
                     "aria-label": "",
@@ -940,7 +510,7 @@
                     "multiple": 0
                 },
                 {
-                    "key": "field_64b463fe2478b",
+                    "key": "field_64ee386b0d48a",
                     "label": "Tamanho",
                     "name": "tamanho_tipo_produto",
                     "aria-label": "",
@@ -963,7 +533,7 @@
                     "multiple": 0
                 },
                 {
-                    "key": "field_64b463fe2478c",
+                    "key": "field_64ee386b0d48b",
                     "label": "Quantidade",
                     "name": "quantidade_tipo_produto",
                     "aria-label": "",
@@ -1005,5 +575,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1689638798
+    "modified": 1693333614
 }

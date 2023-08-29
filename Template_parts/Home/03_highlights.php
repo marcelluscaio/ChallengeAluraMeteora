@@ -16,25 +16,27 @@ foreach($posts as $post){
 	$preco = get_field('preco_produto');
 	$preco = number_format(floatval($preco), 2, ',', '.');
 	
-	//gets all product types
+	//gets all product instances
 	$product_instances = [];
 	$counter = 1;
 	$iterator = 'tipo_produto_'.$counter;
-	while(gettype(get_field($iterator)) === "array"){
+	while(gettype(get_field($iterator)) === "array" && 
+								get_field($iterator)["tamanho_tipo_produto"] !== false && 
+								get_field($iterator)["cor_tipo_produto"] !== false && 
+								get_field($iterator)["tamanho_tipo_produto"] !== false
+	){
+		$instance_object = get_field($iterator);
+
 		array_push($product_instances, 
 			array(
-				"cor" => get_field($iterator)["cor_tipo_produto"]->name,
-				"tamanho" => get_field($iterator)["tamanho_tipo_produto"],
-				"quantidade" => get_field($iterator)["quantidade_tipo_produto"]
+				"cor" => $instance_object["cor_tipo_produto"]->name,
+				"tamanho" => $instance_object["tamanho_tipo_produto"]->name,
+				"quantidade" => $instance_object["quantidade_tipo_produto"]
 			)
 		);
 		$counter++;
 		$iterator = 'tipo_produto_'.$counter;
 	};
-	var_dump($product_instances);
-	var_dump(get_field('tipo_produto_1')["cor_tipo_produto"]);
-	var_dump(get_field('tipo_produto_1')["tamanho_tipo_produto"]);
-	var_dump(get_field('tipo_produto_1')["quantidade_tipo_produto"]);
 
 
 //getting product's color - Custom taxonomy
@@ -57,7 +59,8 @@ foreach($posts as $post){
 		'imagem' => $imagem,
 		'preco' => $preco,
 		'cores' => $cores,
-		'sizes' => $sizes
+		'sizes' => $sizes,
+		'product_instances' => $product_instances
 		)
 	);
 }
@@ -116,6 +119,7 @@ get_template_part('Template_parts/Modal/modal', '',
 		'preco' => $post['preco'],
 		'cores' => $post['cores'],
 		'sizes' => $post['sizes'],
+		'product_instances' => $post['product_instances']
 	)
 ) 
 ?>
