@@ -7,6 +7,7 @@ $posts = get_posts(array(
     'meta_value'    => true
 ));
 
+
 //getting information from posts
 $posts_information = array();
 foreach($posts as $post){
