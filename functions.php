@@ -108,6 +108,9 @@ function cm_add_script(){
 	wp_register_script('cm_product_information', get_template_directory_uri().'/dist/js/general/product-information.js');
 	wp_enqueue_script('cm_product_information', '', array(), '', true);
 
+	wp_register_script('cm_set_product_quantity', get_template_directory_uri().'/dist/js/general/setProductQuantity.js');
+	wp_enqueue_script('cm_set_product_quantity', '', array(), '', true);
+
 	wp_register_script('cm_carousel', get_template_directory_uri().'/dist/js/home/carousel.js');
 	wp_enqueue_script('cm_carousel', '', array(), '', true);
 }
