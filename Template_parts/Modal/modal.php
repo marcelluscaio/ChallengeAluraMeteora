@@ -39,6 +39,13 @@
 		)
 	)
 ?>
+				<div class="modal__form__quantity">
+					<label class="title title--extra-small regular-text--small">Quantidade</label>
+					<select class="regular-text regular-text--small">
+						<option> </option>
+					</select>
+				</div>	
+
 <?php 
 
 /* foreach($product_instances as $instance){

@@ -159,10 +159,6 @@
   margin-bottom: calc(var(--fs-1) / 2);
 }
 
-.highlights dialog form .modal__form__color-size:last-of-type{
-  margin-bottom: var(--fs-1);
-}
-
 .highlights dialog form .modal__form__color-size input[type="radio"]{
   
   width: var(--fs-1);
@@ -177,6 +173,15 @@
 .modal__form__color-size input:checked{
   background-color: var(--purple-1);
 }
+
+.modal__form__quantity{
+  margin-bottom: var(--fs-1);
+}
+
+.modal__form__quantity select{
+  padding: .25em 1em;
+}
+
 
 .highlights dialog form .button{
   cursor: pointer;
