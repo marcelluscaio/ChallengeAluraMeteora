@@ -1,7 +1,5 @@
 const fieldsColorSize = document.querySelectorAll(".modal__form__color-size");
 
-console.log(productInformation)
-
 fieldsColorSize.forEach(field => 
   field.addEventListener("click", e => {
     if(e.target.matches("input")){
@@ -13,9 +11,19 @@ fieldsColorSize.forEach(field =>
       if(select.dataset.cor && select.dataset.tamanho){
         const dialog = select.closest('dialog');
         const title = dialog.querySelector('h3').innerText;
-        //console.log(title);
-        //console.log("mostra")
-        console.log()
+        const thisProduct = productInformation.find(item => item[0] === title);
+        const quantity = thisProduct[1].find(item => item.cor === select.dataset.cor && item.tamanho === select.dataset.tamanho).quantidade;
+        
+        while(select.firstChild){
+          select.removeChild(select.firstChild)
+        };
+
+        for(i=0; i<= quantity; i++){
+          const option = document.createElement('option');
+          option.value = i;
+          option.innerText = i;
+          select.appendChild(option)
+        }
       }
     }
   }
