@@ -24,7 +24,7 @@
 <?php
 	get_template_part('Template_parts/Modal/modal__options', '', 
 		array(
-			"title" => "Cores",
+			"title" => "Cor",
 			"feature_list" => $cores,
 			"product" => $nome
 		)

@@ -39,12 +39,15 @@ foreach($posts as $post){
 		$iterator = 'tipo_produto_'.$counter;
 	};
 
-	//generate array
+	//generate array and JSON
 	$array_name_instances = [$nome, $product_instances];
-	$array_json = json_encode($array_name_instances);
 	$file_path = get_theme_root()."/meteora/dist/js/general/product-information.js";
-	file_put_contents($file_path, file_get_contents($file_path).$array_json);
-
+	$json_pre_content = substr(file_get_contents($file_path), 0, strpos(file_get_contents($file_path), "=") + 2);
+	$json_content = substr(file_get_contents($file_path), strpos(file_get_contents($file_path), "=") + 2);
+	$json_content_php = $json_content !== "" ? json_decode($json_content) : array();
+	array_push($json_content_php, $array_name_instances);
+	$array_json = json_encode($json_content_php);
+	file_put_contents($file_path, $json_pre_content.$array_json);
 
 
 //getting product's color - Custom taxonomy

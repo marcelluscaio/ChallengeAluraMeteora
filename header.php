@@ -13,7 +13,7 @@
 
 <?php
 	$file_path = get_theme_root()."/meteora/dist/js/general/product-information.js";
-	file_put_contents($file_path, "");
+	file_put_contents($file_path, "let productInformation = ");
 	
 	$header_logo = get_template_directory_uri()."/assets/images/logo.png";
 	$header_menu = wp_nav_menu(
