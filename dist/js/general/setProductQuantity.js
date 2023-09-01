@@ -18,8 +18,8 @@ fieldsColorSize.forEach(field =>
       }
       );
 
-      //disabilitar os outros campos (se cor -> tamanho, se tamanho -> cor)
-      console.log(availableSizesOrColors);
+    const inputsOtherType = dialog.querySelectorAll(`.modal__form__color-size input:not([data-type="${type}"])`);
+    inputsOtherType.forEach(input => availableSizesOrColors.includes(input.value) ? input.disabled = false : input.disabled = true );
 
       if(select.dataset.cor && select.dataset.tamanho){
         const quantity = thisProduct[1].find(item => item.cor === select.dataset.cor && item.tamanho === select.dataset.tamanho).quantidade;
@@ -41,6 +41,22 @@ fieldsColorSize.forEach(field =>
 ))
 
 //Refs
+
+/* https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+ 
+Para criar o documento no php
+https://www.php.net/manual/en/function.substr.php
+https://www.php.net/manual/en/function.strpos.php
+
+https://www.freecodecamp.org/news/find-vs-filter-javascript/
+https://www.javascripttutorial.net/dom/manipulating/remove-all-child-nodes/
+
+https://dev.to/elukuro/how-to-clone-object-except-for-one-or-some-keys-623
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values
+ */
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
 // https://gomakethings.com/a-native-vanilla-javascript-way-to-get-the-closest-matching-parent-element/
 //https://gomakethings.com/using-multiple-selectors-with-queryselector-queryselectorall-closest-and-matches/

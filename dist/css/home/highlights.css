@@ -170,6 +170,10 @@
   cursor: pointer;
 }
 
+.highlights dialog form .modal__form__color-size input[type="radio"]:disabled{
+  opacity: .25;
+}
+
 .modal__form__color-size input:checked{
   background-color: var(--purple-1);
 }
