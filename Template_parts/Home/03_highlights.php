@@ -129,8 +129,7 @@ get_template_part('Template_parts/Modal/modal', '',
 		'descricao' => $post['descricao'],
 		'preco' => $post['preco'],
 		'cores' => $post['cores'],
-		'sizes' => $post['sizes'],
-		'product_instances' => $post['product_instances']
+		'sizes' => $post['sizes']
 	)
 ) 
 ?>

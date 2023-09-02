@@ -6,7 +6,6 @@
 	$preco = $args['preco'];
 	$cores = $args['cores'];
 	$sizes = $args['sizes'];
-	$product_instances = $args['product_instances'];
 ?>
 
 <dialog class="modal modal--<?= $counter ?>">
@@ -46,12 +45,6 @@
 					</select>
 				</div>	
 
-<?php 
-
-/* foreach($product_instances as $instance){
-	echo $instance["quantidade"]." ".$nome." ".$instance["cor"]." ".$instance["tamanho"];
-} */
-?>
 				<button class="button">Adicionar à sacola</button>
 			</form>
 		</div>
