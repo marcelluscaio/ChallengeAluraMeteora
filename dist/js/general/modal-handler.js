@@ -28,3 +28,10 @@ closeModalButtonsArray.forEach(button => button.addEventListener('click', (e)=> 
   thisButtonsModal[0].close();
   body.style.overflow = "unset";
 }));
+
+modalsArray.forEach(modal => modal.addEventListener("click", (e) => {
+  /* console.log([e.target.classList].includes("modal")) */
+  if(Array.from(e.target.classList).includes("modal")){
+    e.target.close()
+  }
+}));
