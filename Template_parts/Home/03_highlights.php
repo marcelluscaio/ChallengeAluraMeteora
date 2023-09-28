@@ -100,18 +100,23 @@ endforeach
 ?>
 </style>
 
+
+<?php 
+get_template_part( 'Template_parts/General/produtos', '', array('posts_information' => $posts_information))
+?>
+<!-- 
 <section class="highlights container">
 	<h2 class="title">Produtos que estão bombando</h2>
 	<ul>
 
 <?php
-$counter = 0;
+/* $counter = 0;
 foreach($posts_information as $post) :
-$counter++;
+$counter++; */
 ?>
 		<li>
 			<article>
-				<img src="<?= $post['imagem'] ?>" alt="<?= $post['nome'] ?>" />
+				<img src="<?= $post['imagem']  ?> " alt=" <?= $post['nome'] ?>" />
 				<div>
 					<h3 class="title title--extra-small"><?= $post['nome'] ?></h3>
 					<p class="description regular-text regular-text--small "><?= $post['descricao'] ?></p>
@@ -121,7 +126,7 @@ $counter++;
 			</article>
 			
 <?php 
-get_template_part('Template_parts/Modal/modal', '', 
+/* get_template_part('Template_parts/Modal/modal', '', 
 	array(
 		'counter' => $counter,
 		'imagem' => $post['imagem'],
@@ -131,13 +136,13 @@ get_template_part('Template_parts/Modal/modal', '',
 		'cores' => $post['cores'],
 		'sizes' => $post['sizes']
 	)
-) 
+)  */
 ?>
 
 		</li>
 
 <?php
-endforeach
+/* endforeach */
 ?>
   </ul>
-</section>
+</section> -->

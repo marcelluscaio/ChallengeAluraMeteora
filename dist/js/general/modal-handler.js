@@ -30,7 +30,6 @@ closeModalButtonsArray.forEach(button => button.addEventListener('click', (e)=> 
 }));
 
 modalsArray.forEach(modal => modal.addEventListener("click", (e) => {
-  /* console.log([e.target.classList].includes("modal")) */
   if(Array.from(e.target.classList).includes("modal")){
     e.target.close()
   }
