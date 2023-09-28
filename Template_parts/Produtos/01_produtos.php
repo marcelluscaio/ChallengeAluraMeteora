@@ -70,14 +70,18 @@ foreach($posts as $post){
 }
 
 //getting all color to create styles
-$todas_as_cores = get_terms('cm_colors');
+/* $todas_as_cores = get_terms('cm_colors'); */
 ?>
 
-<style>
 <?php 
-foreach($todas_as_cores as $cor) :
+get_template_part( 'Template_parts/General/produtos', '', array('posts_information' => $posts_information))
+?>
+
+<!-- <style>
+<?php 
+/* foreach($todas_as_cores as $cor) :
 $classe = '.input-'.strtolower(str_replace(' ', '-', $cor->name));
-$hexa_cor = get_field('cor','cm_colors'.'_'.$cor->term_id);
+$hexa_cor = get_field('cor','cm_colors'.'_'.$cor->term_id); */
 ?>
 
 .modal__form__color-size <?= $classe ?>:checked{
@@ -89,7 +93,7 @@ label<?= $classe ?>:hover{
 }
 
 <?php 
-endforeach
+/* endforeach */
 ?>
 </style>
 
@@ -98,9 +102,9 @@ endforeach
 	<ul>
 
 <?php
-$counter = 0;
+/* $counter = 0;
 foreach($posts_information as $post) :
-$counter++;
+$counter++; */
 ?>
 		<li>
 			<article>
@@ -114,7 +118,7 @@ $counter++;
 			</article>
 			
 <?php 
-get_template_part('Template_parts/Modal/modal', '', 
+/* get_template_part('Template_parts/Modal/modal', '', 
 	array(
 		'counter' => $counter,
 		'imagem' => $post['imagem'],
@@ -124,12 +128,12 @@ get_template_part('Template_parts/Modal/modal', '',
 		'cores' => $post['cores'],
 		'sizes' => $post['sizes'],
 	)
-) 
+)  */
 ?>
 
 		</li>
 <?php
-endforeach
+/* endforeach */
 ?>
    </ul>
-</section>
+</section> -->

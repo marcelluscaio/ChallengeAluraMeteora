@@ -18,7 +18,7 @@ foreach($posts as $post){
 	$preco = number_format(floatval($preco), 2, ',', '.');
 	
 	//gets all product instances
-	$product_instances = [];
+/* 	$product_instances = [];
 	$counter = 1;
 	$iterator = 'tipo_produto_'.$counter;
 	while(gettype(get_field($iterator)) === "array" && 
@@ -37,17 +37,17 @@ foreach($posts as $post){
 		);
 		$counter++;
 		$iterator = 'tipo_produto_'.$counter;
-	};
+	}; */
 
 	//generate array and JSON
-	$array_name_instances = [$nome, $product_instances];
+/* 	$array_name_instances = [$nome, $product_instances];
 	$file_path = get_theme_root()."/meteora/dist/js/general/product-information.js";
 	$json_pre_content = substr(file_get_contents($file_path), 0, strpos(file_get_contents($file_path), "=") + 2);
 	$json_content = substr(file_get_contents($file_path), strpos(file_get_contents($file_path), "=") + 2);
 	$json_content_php = $json_content !== "" ? json_decode($json_content) : array();
 	array_push($json_content_php, $array_name_instances);
 	$array_json = json_encode($json_content_php);
-	file_put_contents($file_path, $json_pre_content.$array_json);
+	file_put_contents($file_path, $json_pre_content.$array_json); */
 
 
 //getting product's color - Custom taxonomy
@@ -71,20 +71,21 @@ foreach($posts as $post){
 		'preco' => $preco,
 		'cores' => $cores,
 		'sizes' => $sizes,
-		'product_instances' => $product_instances
+		/* 'product_instances' => $product_instances */
 		)
 	);
 }
 
 //getting all color to create styles
-$todas_as_cores = get_terms('cm_colors');
+/* $todas_as_cores = get_terms('cm_colors'); */
 ?>
 
-<style>
+
+<!-- <style>
 <?php 
-foreach($todas_as_cores as $cor) :
+/* foreach($todas_as_cores as $cor) :
 $classe = '.input-'.strtolower(str_replace(' ', '-', $cor->name));
-$hexa_cor = get_field('cor','cm_colors'.'_'.$cor->term_id);
+$hexa_cor = get_field('cor','cm_colors'.'_'.$cor->term_id); */
 ?>
 
 .modal__form__color-size <?= $classe ?>:checked{
@@ -96,9 +97,9 @@ label<?= $classe ?>:hover{
 }
 
 <?php 
-endforeach
+/* endforeach */
 ?>
-</style>
+</style> -->
 
 
 <?php 
