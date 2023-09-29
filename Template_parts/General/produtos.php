@@ -1,6 +1,43 @@
 <?php
+//get posts
+$posts = $args['posts'];
+
+//extract post information from posts
+$posts_information = array();
+foreach($posts as $post){
+	$nome = get_field('nome_produto');
+	$descricao = get_field('descricao_produto');
+	$imagem = get_field('imagem_produto');
+	$preco = get_field('preco_produto');
+	$preco = number_format(floatval($preco), 2, ',', '.');
+
+	//getting product's color - Custom taxonomy
+	$cores_object = get_the_terms($post, 'cm_colors');
+	$cores = array();
+	foreach($cores_object as $cor){
+		array_push($cores, $cor->name);
+	};
+
+	//getting product's size - Custom taxonomy
+	$sizes_object = get_the_terms($post, 'cm_sizes');
+	$sizes = array();
+	foreach($sizes_object as $size){
+		array_push($sizes, $size->name);
+	};
+
+	array_push($posts_information, array(
+		'nome' => $nome,
+		'descricao' => $descricao,
+		'imagem' => $imagem,
+		'preco' => $preco,
+		'cores' => $cores,
+		'sizes' => $sizes
+		)
+	);
+}
+
 //get products information
-$posts_information = $args['posts_information'];
+/* $posts_information = $args['posts_information']; */
 
 //get products instances
 $product_instances = [];

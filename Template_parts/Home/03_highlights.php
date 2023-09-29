@@ -7,7 +7,6 @@ $posts = get_posts(array(
     'meta_value'    => true
 ));
 
-
 //getting information from posts
 $posts_information = array();
 foreach($posts as $post){
@@ -103,7 +102,7 @@ label<?= $classe ?>:hover{
 
 
 <?php 
-get_template_part( 'Template_parts/General/produtos', '', array('posts_information' => $posts_information))
+get_template_part( 'Template_parts/General/produtos', '', array('posts' => $posts))
 ?>
 <!-- 
 <section class="highlights container">

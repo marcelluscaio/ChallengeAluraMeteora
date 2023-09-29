@@ -74,7 +74,7 @@ foreach($posts as $post){
 ?>
 
 <?php 
-get_template_part( 'Template_parts/General/produtos', '', array('posts_information' => $posts_information))
+get_template_part( 'Template_parts/General/produtos', '', array('posts' => $posts))
 ?>
 
 <!-- <style>
