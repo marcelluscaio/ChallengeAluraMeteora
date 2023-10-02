@@ -72,6 +72,8 @@ foreach($posts_information as $post){
 	$array_json = json_encode($json_content_php);
 	file_put_contents($file_path, $json_pre_content.$array_json);
 }
+
+
 ?>
 
 <style>
