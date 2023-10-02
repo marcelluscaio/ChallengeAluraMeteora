@@ -49,6 +49,8 @@ while(gettype(get_field($iterator)) === "array" &&
               get_field($iterator)["tamanho_tipo_produto"] !== false
 ){
   $instance_object = get_field($iterator);
+	//Erro aqui
+	var_dump($instance_object);
 
   array_push($product_instances, 
     array(
