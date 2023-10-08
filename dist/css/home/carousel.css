@@ -30,9 +30,11 @@
 }
 
 .carousel__controls__navigation button{
+  position: relative;
+  
   --size: var(--fs-1);
   width: var(--size);
-  height: calc(var(--size) / 5);
+  height: var(--size);
   margin-bottom: calc(var(--size) * 1.5);
   border: none;
   border-radius: var(--size);
@@ -40,11 +42,11 @@
   background-color: var(--baseColor);
 
   transform-origin: right;
-  transition: transform .5s ease-in-out;
+  transition: width .5s ease-in-out;
 }
 
-.navigation--active{
-  transform: scaleX(2.5);
+.carousel__controls__navigation .navigation--active{
+  width: calc(var(--size) * 5);
 }
 
 .carousel__controls__arrows{

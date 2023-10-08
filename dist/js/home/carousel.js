@@ -49,7 +49,7 @@ function changeActiveNavigation(trackPosition){
 };
 
 function changeSlideOnNavigation(navigation){
-  console.log(navigation)
+  console.log(navigation.classList)
 }
 
 //function for aria hidden
