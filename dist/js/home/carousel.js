@@ -16,6 +16,12 @@ let activeNavigation = navigation.querySelector(".navigation--active");
   )
 );
 
+navigationButtons.forEach(
+  button => button.addEventListener(
+    'click', (e) => changeSlideOnNavigation(e.target)
+  )
+);
+
 function carouselEngine(button){
   if(button.classList.contains('arrow--left')){
     if(trackPosition > 0){
@@ -40,4 +46,11 @@ function changeActiveNavigation(trackPosition){
     activeNavigation = navigationButtons[trackPosition];
     navigationButtons[trackPosition].classList.add("navigation--active");
   }
+};
+
+function changeSlideOnNavigation(navigation){
+  console.log(navigation)
 }
+
+//function for aria hidden
+//function for clicking navigation
