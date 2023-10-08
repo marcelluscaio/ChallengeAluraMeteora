@@ -43,10 +43,12 @@
 
   transform-origin: right;
   transition: width .5s ease-in-out;
+
+  cursor: pointer;
 }
 
 .carousel__controls__navigation .navigation--active{
-  width: calc(var(--size) * 5);
+  width: calc(var(--size) * 4);
 }
 
 .carousel__controls__arrows{

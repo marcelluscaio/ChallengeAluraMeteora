@@ -49,7 +49,8 @@ function changeActiveNavigation(trackPosition){
 };
 
 function changeSlideOnNavigation(navigation){
-  console.log(navigation.classList)
+  const array = [...navigation.classList];
+  const newArray = array.map(className => console.log(className.slice(className.indexOf('-') + 2)));
 }
 
 //function for aria hidden
