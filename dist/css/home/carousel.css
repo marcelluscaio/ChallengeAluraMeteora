@@ -47,6 +47,12 @@
   cursor: pointer;
 }
 
+.carousel__controls__navigation button:focus-visible,
+.carousel__controls__arrows button:focus-visible{
+  outline: 3px solid var(--baseColor);
+  outline-offset: 4px;
+}
+
 .carousel__controls__navigation .navigation--active{
   width: calc(var(--size) * 4);
 }
