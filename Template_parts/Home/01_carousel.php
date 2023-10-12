@@ -73,7 +73,7 @@ foreach($slides as $slide):
 		$bgClass = ($slide["carousel_title"] || $slide["carousel_title_2"]) && $slide["carousel_bg"] ? "carousel__track__slide--"."bg" : "";
 		$arialabel = $slide["carousel_title"] ? 'aria-labelledby="title--'.$index.'"' : 'aria-label="'.$index.' of '.count($slides).'"';
 ?>
-		<div class="carousel__track__slide carousel__track__slide--<?= $index ?> <?= $bgClass ?>" role="group" aria-roledescription="Slide" <?= $arialabel ?>>
+		<div class="carousel__track__slide carousel__track__slide--<?= $index ?> <?= $bgClass ?>" role="group" aria-roledescription="Slide" <?= $arialabel ?>  aria-hidden="<?= $index === 1 ? "false" : "true" ?>">
 <?php if($slide["carousel_title"]): ?>
 			<p class="title" id="title--<?= $index ?>"> <?= $slide["carousel_title"] ?> </p>
 <?php endif ?>

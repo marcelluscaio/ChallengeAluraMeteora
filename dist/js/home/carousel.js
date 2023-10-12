@@ -1,5 +1,6 @@
 const track = document.querySelector('.carousel__track');
 let trackPosition = parseInt(getComputedStyle(track).getPropertyValue('--position'));
+const trackSlides = track.querySelectorAll('.carousel__track__slide');
 const slideQuantity = track.childElementCount;
 const arrowRight = document.querySelector('.arrow--right');
 const arrowLeft = document.querySelector('.arrow--left');
@@ -20,8 +21,12 @@ navigationButtons.forEach(
 );
 
 function carouselEngine(trackPosition){
-  moveTrack(trackPosition);
-  changeActiveNavigation(trackPosition);
+  if(activeNavigation !== navigationButtons[trackPosition]){
+    moveTrack(trackPosition);
+    changeSlideAriaHidden(trackPosition);
+    changeActiveNavigation(trackPosition);
+    changeButtonAriaDisabled(trackPosition);
+  }
 }
 
 function moveTrack(trackPosition){
@@ -29,19 +34,20 @@ function moveTrack(trackPosition){
 };
 
 function changeActiveNavigation(trackPosition){
-  if(activeNavigation !== navigationButtons[trackPosition]){
-    activeNavigation.classList.remove("navigation--active");
-    activeNavigation = navigationButtons[trackPosition];
-    activeNavigation.classList.add("navigation--active");
-    changeButtonAriaDisabled(trackPosition);
-  }
+  activeNavigation.classList.remove("navigation--active");
+  activeNavigation = navigationButtons[trackPosition];
+  activeNavigation.classList.add("navigation--active");
 };
 
 function changeButtonAriaDisabled(trackPosition){
   navigationButtons.forEach((button, index) => {
-    index === trackPosition ? button.setAttribute("aria-disabled", true) : button.setAttribute("aria-disabled", false);
+    index === trackPosition ? button.setAttribute("aria-disabled", false) : button.setAttribute("aria-disabled", true);
   }
   );
+};
+
+function changeSlideAriaHidden(trackPosition){
+  trackSlides.forEach((slide, index) => index === trackPosition ? slide.setAttribute("aria-hidden", false) : slide.setAttribute("aria-hidden", true))
 };
 
 function changeSlideOnButton(button){
