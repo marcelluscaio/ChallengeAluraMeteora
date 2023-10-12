@@ -2,7 +2,7 @@
   position: relative;
   
   overflow-x: hidden;
-  --baseColor: var(--white-1)
+  --baseColor: var(--white-1);
 }
 
 .carousel__controls{

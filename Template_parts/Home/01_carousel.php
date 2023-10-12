@@ -46,7 +46,7 @@ endforeach;
 </style>
 
 
-<section class="carousel" aria-label="Carousel">
+<section class="carousel" role="region" aria-roledescription="carousel" aria-label="Produtos em alta">
 
 	<div class="carousel__controls">
 		<div class="carousel__controls__navigation">
@@ -59,8 +59,8 @@ foreach($slides as $slide):
 <?php endforeach ?>
 		</div>
 		<div class="carousel__controls__arrows">
-			<button class="arrow--left"></button>
-			<button class="arrow--right"></button>
+			<button class="arrow--left" aria-label="Previous Slide"></button>
+			<button class="arrow--right" aria-label="Next Slide"></button>
 		</div>
 	</div>
 
@@ -71,10 +71,11 @@ foreach($slides as $slide):
 	$index++;
 	if($slide["carousel_image"]):
 		$bgClass = ($slide["carousel_title"] || $slide["carousel_title_2"]) && $slide["carousel_bg"] ? "carousel__track__slide--"."bg" : "";
+		$arialabel = $slide["carousel_title"] ? 'aria-labelledby="title--'.$index.'"' : 'aria-label="'.$index.' of '.count($slides).'"';
 ?>
-		<div class="carousel__track__slide carousel__track__slide--<?= $index ?> <?= $bgClass ?>" role="group" aria-roledescription="Slide">
+		<div class="carousel__track__slide carousel__track__slide--<?= $index ?> <?= $bgClass ?>" role="group" aria-roledescription="Slide" <?= $arialabel ?>>
 <?php if($slide["carousel_title"]): ?>
-			<p class="title "><?= $slide["carousel_title"] ?></p>
+			<p class="title" id="title--<?= $index ?>"> <?= $slide["carousel_title"] ?> </p>
 <?php endif ?>
 <?php if($slide["carousel_title_2"]): ?>
 			<p class="regular-text"><?= $slide["carousel_title_2"] ?></p>

@@ -1,6 +1,6 @@
 const track = document.querySelector('.carousel__track');
-let trackPosition = parseInt(getComputedStyle(track).getPropertyValue('--position'));
 
+let trackPosition = parseInt(getComputedStyle(track).getPropertyValue('--position'));
 const slideQuantity = track.childElementCount;
 
 const arrowRight = document.querySelector('.arrow--right');
