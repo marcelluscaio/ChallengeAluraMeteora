@@ -48,14 +48,14 @@ endforeach;
 
 <section class="carousel" role="region" aria-roledescription="carousel" aria-label="Produtos em alta">
 
-	<div class="carousel__controls">
+	<div class="carousel__controls" role="group" aria-label="Slide Controls">
 		<div class="carousel__controls__navigation">
 <?php 
 $index = 0;
 foreach($slides as $slide):	
 	$index++;
 ?>
-			<button class="navigation--<?= $index ?> <?php if($index === 1){echo "navigation--active";} ?>"></button>
+			<button class="navigation--<?= $index ?> <?php if($index === 1){echo "navigation--active";} ?>" aria-label="Show slide <?= $index ?> of <?= count($slides) ?>"  aria-disabled="<?= $index === 1 ? "true" : "false" ?>"></button>
 <?php endforeach ?>
 		</div>
 		<div class="carousel__controls__arrows">
